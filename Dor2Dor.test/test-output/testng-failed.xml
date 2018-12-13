@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testCases.TesClass">
+        <methods>
+          <include name="TC_008_select_Terriotorry"/>
+          <include name="Tc_014_verify_Cancle_Submission"/>
+          <include name="TC_009_Verify_select_GN_Division"/>
+          <include name="TC_001_verify_User_Able_TO_Navigate_Dashboard"/>
+          <include name="Tc_015_verify_SubmitSuccessFully"/>
+        </methods>
+      </class> <!-- testCases.TesClass -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
