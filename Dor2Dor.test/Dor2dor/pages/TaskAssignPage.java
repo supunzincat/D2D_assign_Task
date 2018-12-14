@@ -41,7 +41,8 @@ public class TaskAssignPage {
 	@FindBy(how=How.XPATH,using="//*[@id='sdate']") WebElement startdate;
 	@FindBy(how=How.XPATH,using="//*[@id='edate']") WebElement EndDate;
 
-	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/label/span") WebElement TowerCheckBox;
+	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/label/span")
+	private WebElement TowerCheckBox;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='googlemap_elem']/div/div/div[1]/div[3]/div/div[3]/div[2]/img") WebElement Towerimage;
 	
@@ -175,7 +176,7 @@ Selectdate(EndDate);
 	public void ClickonToweCheckBox() {
 		// TODO Auto-generated method stub
 		
-		TowerCheckBox.click();
+		getTowerCheckBox().click();
 		assertTrue(Towerimage.isEnabled());		
 	}
 	
@@ -229,5 +230,13 @@ Selectdate(EndDate);
 		String  message=VerifyMessage.getText();
 		assertTrue(message.contains("success"));
 		
+	}
+
+	public WebElement getTowerCheckBox() {
+		return TowerCheckBox;
+	}
+
+	public void setTowerCheckBox(WebElement towerCheckBox) {
+		TowerCheckBox = towerCheckBox;
 	}
 }

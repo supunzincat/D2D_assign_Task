@@ -9,7 +9,7 @@ import pages.DshboardPage;
 import pages.LoginPage;
 import pages.TaskAssignPage;
 
-public class TesClass {
+public class TC_AssignTasks {
 	
 	WebDriver d=LaunchWebDriver.WebdriverLaunch();
 	
@@ -126,6 +126,7 @@ public void TC_002_Verify_navigateTo_assignTask() {
 		// TODO Auto-generated method stub
 		TaskAssignPage taskAssign= new TaskAssignPage(d);
 		taskAssign.ClickonToweCheckBox();
+		//taskAssign.TowerCheckBox.cl
 		
 	}
 	
