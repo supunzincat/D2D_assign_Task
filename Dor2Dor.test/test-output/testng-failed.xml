@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.Testsuit2$TesClass">
+      <class name="testCases.ViewSpecificTask$TesClass">
         <methods>
-          <include name="TC_0001_verify_User_Able_TO_Navigate_Dashboard"/>
+          <include name="TC001_verify_District_Is_enable"/>
         </methods>
-      </class> <!-- testCases.Testsuit2$TesClass -->
+      </class> <!-- testCases.ViewSpecificTask$TesClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
