@@ -29,7 +29,7 @@ public class ViewTaskPage {
 	
 	@FindBy(how=How.XPATH,using="//*[@id='edate']") WebElement DDEnddate;
 	
-	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/label/span") WebElement CheckBoxTowers;
+	@FindBy(how=How.XPATH,using="//*[@id=\'show_towers_input\']") WebElement CheckBoxTowers;
 	@FindBy(how=How.XPATH,using="//*[@id='js-filter_map_towers']") WebElement TowersDropdown;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/div/div") WebElement DDTowers;
@@ -49,7 +49,7 @@ public class ViewTaskPage {
 	}
 	
 	
-	public void VeriffDDNotEnabled(WebElement DDElement) {
+	public void VerifyDisabled(WebElement DDElement) {
 		// TODO Auto-generated method stub
 		//d.get("http://wom/v3staging/d2d/SingleTask/manage/4");
 		String isdissable= DDElement.getAttribute("disabled");
@@ -72,43 +72,43 @@ public class ViewTaskPage {
 DDElement.isEnabled();
 	}
 		
-	public void VerifyDistrictISEnabled() {
+	public void VerifyDistrictISDisabled() {
 		// TODO Auto-generated method stub
-		VeriffDDNotEnabled(DDDistrict);
+		VerifyDisabled(DDDistrict);
 	}
 	
-	public void TerriotorryISEnabled() {
+	public void TerriotorryISDisabled() {
 		// TODO Auto-generated method stub
-		VeriffDDNotEnabled(DDTerriotorry);
+		VerifyDisabled(DDTerriotorry);
 	}
 	
-	public void VerifyDDGNDivisionsISEnabled() {
+	public void VerifyDDGNDivisionDisabled() {
 		// TODO Auto-generated method stub
-		VeriffDDNotEnabled(DDGNDivisions);
+		VerifyDisabled(DDGNDivisions);
 	}
 	
-	public void VerifyDDStartdateISEnabled() {
+	public void VerifyDDStartdateISDisabled() {
 		// TODO Auto-generated method stub
-		VeriffDDNotEnabled(DDStartdate);
+		VerifyDisabled(DDStartdate);
 	}
 	
-	public void VerifyDDEnddateISEnabled() {
+	public void VerifyDDEnddateISDisabled() {
 		// TODO Auto-generated method stub
-		VeriffDDNotEnabled(DDEnddate);
+		VerifyDisabled(DDEnddate);
 	}
-	public void VerifyDDTowersISEnabled() {
+	public void VerifyTowersCheckboxISDisabled() {
 		// TODO Auto-generated method stub
-		verifycheckboxisenable(CheckBoxTowers);
+		VerifyDisabled(CheckBoxTowers);
 	}
 	
-	public void VerifyDDTowersDropdownISEnabled() {
+	public void VerifyDDTowersDropdownISDisabled() {
 		// TODO Auto-generated method stub
 		verifycheckboxisenable(TowersDropdown);
 	}
 	
-	public void VerifyTextBoxRemarksTexNotEnabled() {
+	public void VerifyTextBoxRemarksTexDisabled() {
 		// TODO Auto-generated method stub
-		VeriffDDNotEnabled(TextBoxRemarksTex);
+		VerifyDisabled(TextBoxRemarksTex);
 	}
 	
 	public void ClickOnButtons(WebElement ButtonName) {
@@ -124,6 +124,33 @@ ButtonName.click();
 	public void VerifyTextBoxRemarksTexISEnabled() {
 		// TODO Auto-generated method stub
 		VeriffDDEnabled(TextBoxRemarksTex);
+	}
+	
+	public void VerifyGNDivisionISEnabled() {
+		// TODO Auto-generated method stub
+		VeriffDDEnabled(DDGNDivisions);
+	}
+	
+	public void VerifyTerriotorryDDISEnabled() {
+		// TODO Auto-generated method stub
+		VeriffDDEnabled(DDTerriotorry);
+	}
+	
+	public void VerifyStartDateIsEnabled() {
+		// TODO Auto-generated method stub
+		VeriffDDEnabled(DDStartdate);
+	}
+	public void VerifyEndDateIsEnabled() {
+		// TODO Auto-generated method stub
+		VeriffDDEnabled(DDEnddate);
+	}
+	public void VerifyTowersCheckboxISEnabled() {
+		// TODO Auto-generated method stub
+		VeriffDDEnabled(CheckBoxTowers);
+	}
+	public void VerifyTowersDropDownISEnabled() {
+		// TODO Auto-generated method stub
+		VeriffDDEnabled(TowersDropdown);
 	}
 	
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="testCases.ViewSpecificTask$TesClass">
         <methods>
-          <include name="TC001_verify_District_Is_enable"/>
+          <include name="TC001_verify_NavigateToEdittaskScreen"/>
         </methods>
       </class> <!-- testCases.ViewSpecificTask$TesClass -->
     </classes>
