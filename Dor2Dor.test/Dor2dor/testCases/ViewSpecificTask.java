@@ -156,7 +156,7 @@ public class ViewSpecificTask {
 			
 		}
 		@Test(priority=18)
-		public void TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAftertest() {
+		public void TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAftertest1() {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			ViewTaskPage viewtask= new ViewTaskPage(driver);
 			viewtask.VerifyTextBoxRemarksTexISEnabled();
