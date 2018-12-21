@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="17" passed="16">
+<testng-results skipped="0" failed="1" total="18" passed="17">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9066" started-at="2018-12-20T07:42:17Z" finished-at="2018-12-20T07:42:26Z">
+  <suite name="Default suite" duration-ms="497982" started-at="2018-12-21T06:52:18Z" finished-at="2018-12-21T07:00:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9066" started-at="2018-12-20T07:42:17Z" finished-at="2018-12-20T07:42:26Z">
+    <test name="Default test" duration-ms="497982" started-at="2018-12-21T06:52:18Z" finished-at="2018-12-21T07:00:36Z">
       <class name="testCases.ViewSpecificTask$TesClass">
-        <test-method status="FAIL" signature="TC001_verify_NavigateToEdittaskScreen()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC001_verify_NavigateToEdittaskScreen" duration-ms="1069" started-at="2018-12-20T13:12:17Z" finished-at="2018-12-20T13:12:19Z">
+        <test-method status="FAIL" signature="TC001_verify_NavigateToEdittaskScreen()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC001_verify_NavigateToEdittaskScreen" duration-ms="1109" started-at="2018-12-21T12:22:18Z" finished-at="2018-12-21T12:22:19Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [http://wom/v3staging/user/user_dashbaord] but found [http://wom/v3staging/user/login]]]>
@@ -51,70 +51,74 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC001_verify_NavigateToEdittaskScreen -->
-        <test-method status="PASS" signature="TC002_verify_DistrictDD_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC002_verify_DistrictDD_Is_Disabled" duration-ms="6147" started-at="2018-12-20T13:12:19Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC002_verify_DistrictDD_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC002_verify_DistrictDD_Is_Disabled" duration-ms="3266" started-at="2018-12-21T12:22:19Z" finished-at="2018-12-21T12:22:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC002_verify_DistrictDD_Is_Disabled -->
-        <test-method status="PASS" signature="TC003_verify_Verify_TerriotorryDD_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC003_verify_Verify_TerriotorryDD_Is_Disabled" duration-ms="224" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC003_verify_Verify_TerriotorryDD_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC003_verify_Verify_TerriotorryDD_Is_Disabled" duration-ms="445" started-at="2018-12-21T12:22:22Z" finished-at="2018-12-21T12:22:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC003_verify_Verify_TerriotorryDD_Is_Disabled -->
-        <test-method status="PASS" signature="TC004_verify_Verify_DDGNDivisions_IS_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC004_verify_Verify_DDGNDivisions_IS_Disabled" duration-ms="66" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC004_verify_Verify_DDGNDivisions_IS_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC004_verify_Verify_DDGNDivisions_IS_Disabled" duration-ms="77" started-at="2018-12-21T12:22:23Z" finished-at="2018-12-21T12:22:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC004_verify_Verify_DDGNDivisions_IS_Disabled -->
-        <test-method status="PASS" signature="TC005_verify_VerifyDDStartdateISEnabled_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC005_verify_VerifyDDStartdateISEnabled_Is_Disabled" duration-ms="53" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC005_verify_VerifyDDStartdateISEnabled_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC005_verify_VerifyDDStartdateISEnabled_Is_Disabled" duration-ms="43" started-at="2018-12-21T12:22:23Z" finished-at="2018-12-21T12:22:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC005_verify_VerifyDDStartdateISEnabled_Is_Disabled -->
-        <test-method status="PASS" signature="TC006_verify_VerifyDDEnddateISEnabled_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC006_verify_VerifyDDEnddateISEnabled_Is_Disabled" duration-ms="50" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC006_verify_VerifyDDEnddateISEnabled_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC006_verify_VerifyDDEnddateISEnabled_Is_Disabled" duration-ms="56" started-at="2018-12-21T12:22:23Z" finished-at="2018-12-21T12:22:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC006_verify_VerifyDDEnddateISEnabled_Is_Disabled -->
-        <test-method status="PASS" signature="TC007_VerifyTowersCheckboxISEnabled_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC007_VerifyTowersCheckboxISEnabled_Is_Disabled" duration-ms="47" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC007_VerifyTowersCheckboxISEnabled_Is_Disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC007_VerifyTowersCheckboxISEnabled_Is_Disabled" duration-ms="43" started-at="2018-12-21T12:22:23Z" finished-at="2018-12-21T12:22:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC007_VerifyTowersCheckboxISEnabled_Is_Disabled -->
-        <test-method status="PASS" signature="TC008_VerifyDDTowersIs_Disaled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC008_VerifyDDTowersIs_Disaled" duration-ms="56" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC008_VerifyDDTowersIs_Disaled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC008_VerifyDDTowersIs_Disaled" duration-ms="54" started-at="2018-12-21T12:22:23Z" finished-at="2018-12-21T12:22:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC008_VerifyDDTowersIs_Disaled -->
-        <test-method status="PASS" signature="TC009_VerifyTextBoxRemarksTexIS_disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC009_VerifyTextBoxRemarksTexIS_disabled" duration-ms="43" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC009_VerifyTextBoxRemarksTexIS_disabled()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC009_VerifyTextBoxRemarksTexIS_disabled" duration-ms="61" started-at="2018-12-21T12:22:23Z" finished-at="2018-12-21T12:22:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC009_VerifyTextBoxRemarksTexIS_disabled -->
-        <test-method status="PASS" signature="TC0011_verify_DistrictDD_Is_Disabled_after_click_On_EDit()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC0011_verify_DistrictDD_Is_Disabled_after_click_On_EDit" duration-ms="27" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:25Z">
+        <test-method status="PASS" signature="TC0011_verify_DistrictDD_Is_Disabled_after_click_On_EDit()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC0011_verify_DistrictDD_Is_Disabled_after_click_On_EDit" duration-ms="28858" started-at="2018-12-21T12:22:23Z" finished-at="2018-12-21T12:22:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0011_verify_DistrictDD_Is_Disabled_after_click_On_EDit -->
-        <test-method status="PASS" signature="TC0012_verify_Terriotorry_Is_Disabled_after_click_On_EDit()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC0012_verify_Terriotorry_Is_Disabled_after_click_On_EDit" duration-ms="375" started-at="2018-12-20T13:12:25Z" finished-at="2018-12-20T13:12:26Z">
+        <test-method status="PASS" signature="TC0012_verify_Terriotorry_Is_Disabled_after_click_On_EDit()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC0012_verify_Terriotorry_Is_Disabled_after_click_On_EDit" duration-ms="80293" started-at="2018-12-21T12:22:52Z" finished-at="2018-12-21T12:24:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC0012_verify_Terriotorry_Is_Disabled_after_click_On_EDit -->
-        <test-method status="PASS" signature="TC013_verify_GNDivision_DD_is_enabled_after_click_on_Edit_Button()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC013_verify_GNDivision_DD_is_enabled_after_click_on_Edit_Button" duration-ms="33" started-at="2018-12-20T13:12:26Z" finished-at="2018-12-20T13:12:26Z">
+        <test-method status="PASS" signature="TC013_verify_GNDivision_DD_is_enabled_after_click_on_Edit_Button()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC013_verify_GNDivision_DD_is_enabled_after_click_on_Edit_Button" duration-ms="22200" started-at="2018-12-21T12:24:12Z" finished-at="2018-12-21T12:24:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC013_verify_GNDivision_DD_is_enabled_after_click_on_Edit_Button -->
-        <test-method status="PASS" signature="TC014_VerifyStartDateIsEnabled_AftretClickOnEditButto()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC014_VerifyStartDateIsEnabled_AftretClickOnEditButto" duration-ms="37" started-at="2018-12-20T13:12:26Z" finished-at="2018-12-20T13:12:26Z">
+        <test-method status="PASS" signature="TC014_VerifyStartDateIsEnabled_AftretClickOnEditButto()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC014_VerifyStartDateIsEnabled_AftretClickOnEditButto" duration-ms="54784" started-at="2018-12-21T12:24:34Z" finished-at="2018-12-21T12:25:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC014_VerifyStartDateIsEnabled_AftretClickOnEditButto -->
-        <test-method status="PASS" signature="Verify_End_Date_Is_Enabled_AftretClick_On_EditButto()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="Verify_End_Date_Is_Enabled_AftretClick_On_EditButto" duration-ms="44" started-at="2018-12-20T13:12:26Z" finished-at="2018-12-20T13:12:26Z">
+        <test-method status="PASS" signature="Verify_End_Date_Is_Enabled_AftretClick_On_EditButto()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="Verify_End_Date_Is_Enabled_AftretClick_On_EditButto" duration-ms="165760" started-at="2018-12-21T12:25:29Z" finished-at="2018-12-21T12:28:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_End_Date_Is_Enabled_AftretClick_On_EditButto -->
-        <test-method status="PASS" signature="Verify_tower_CheckBox_is_enabled_after_click_on_edit_button()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="Verify_tower_CheckBox_is_enabled_after_click_on_edit_button" duration-ms="85" started-at="2018-12-20T13:12:26Z" finished-at="2018-12-20T13:12:26Z">
+        <test-method status="PASS" signature="Verify_tower_CheckBox_is_enabled_after_click_on_edit_button()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="Verify_tower_CheckBox_is_enabled_after_click_on_edit_button" duration-ms="46507" started-at="2018-12-21T12:28:15Z" finished-at="2018-12-21T12:29:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_tower_CheckBox_is_enabled_after_click_on_edit_button -->
-        <test-method status="PASS" signature="Verify_tower_Dropdown_is_enabled_after_click_on_edit_button()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="Verify_tower_Dropdown_is_enabled_after_click_on_edit_button" duration-ms="87" started-at="2018-12-20T13:12:26Z" finished-at="2018-12-20T13:12:26Z">
+        <test-method status="PASS" signature="Verify_tower_Dropdown_is_enabled_after_click_on_edit_button()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="Verify_tower_Dropdown_is_enabled_after_click_on_edit_button" duration-ms="74921" started-at="2018-12-21T12:29:02Z" finished-at="2018-12-21T12:30:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_tower_Dropdown_is_enabled_after_click_on_edit_button -->
-        <test-method status="PASS" signature="TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick()[pri:0, instance:testCases.ViewSpecificTask$TesClass@212b5695]" name="TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick" duration-ms="550" started-at="2018-12-20T13:12:26Z" finished-at="2018-12-20T13:12:26Z">
+        <test-method status="PASS" signature="TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick" duration-ms="19383" started-at="2018-12-21T12:30:16Z" finished-at="2018-12-21T12:30:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick -->
+        <test-method status="PASS" signature="TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClicktest()[pri:0, instance:testCases.ViewSpecificTask$TesClass@6b9ce1bf]" name="TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClicktest" duration-ms="0" started-at="2018-12-21T12:30:36Z" finished-at="2018-12-21T12:30:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClicktest -->
       </class> <!-- testCases.ViewSpecificTask$TesClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
