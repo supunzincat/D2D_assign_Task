@@ -17,8 +17,12 @@ public class DshboardPage  {
 
 	WebDriver d;
 	
-	@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/a") WebElement DooorToDoorTab;
-	@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/ul[5]/li/a") WebElement AsignTaskSubmenue;
+	//@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/a") WebElement DooorToDoorTab;
+	@FindBy (how=How.XPATH,using="//*[contains(text(),'DOOR TO DOOR')]") WebElement DooorToDoorTab;
+	
+	//@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/ul[5]/li/a") WebElement AsignTaskSubmenue;
+	@FindBy (how=How.XPATH,using="//*[contains(text(),'Assign Task')]") WebElement AsignTaskSubmenue;
+	
 	
 	public DshboardPage(WebDriver d2) {
 		// TODO Auto-generated constructor stub

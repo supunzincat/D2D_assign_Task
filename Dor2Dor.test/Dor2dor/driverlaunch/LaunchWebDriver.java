@@ -13,6 +13,7 @@ public class LaunchWebDriver {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://wom/v3staging/user/login");
+		//driver.get("http://localhost/wom_v3/user/login");
 		return driver;
 		
 	}
