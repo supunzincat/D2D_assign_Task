@@ -15,7 +15,7 @@ WebDriver driver;
 	//*[@id="main-content"]/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/button
 	
 	@FindBy(how=How.XPATH,using="//*[@id=\'main-content\']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/div/div[1]/input")WebElement DistrictTextBoxt;
-	//
+	
 	
 	//@FindBy(how=How.XPATH,using="//*[@id='territory_id']")WebElement teriitorry;
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/button")WebElement teriitorry;
