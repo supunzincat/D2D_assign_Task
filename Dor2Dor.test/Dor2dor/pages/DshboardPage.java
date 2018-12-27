@@ -22,6 +22,8 @@ public class DshboardPage  {
 	
 	//@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/ul[5]/li/a") WebElement AsignTaskSubmenue;
 	@FindBy (how=How.XPATH,using="//*[contains(text(),'Assign Task')]") WebElement AsignTaskSubmenue;
+	@FindBy(how=How.XPATH,using="//*[contains(text(),'My Tasks')]") WebElement MYTaskText;
+	
 	
 	
 	public DshboardPage(WebDriver d2) {
@@ -47,7 +49,17 @@ System.out.println(CurrentUrl);
 assertEquals(CurrentUrl, "http://wom/v3staging/d2d/AssignTask/index");
 
 	}
-
+	
+	public void ClickOnDortoDor() {
+		// TODO Auto-generated method stub
+DooorToDoorTab.click();
+	}
+public void NavigteToMyTask() {
+	// TODO Auto-generated method stub
+MYTaskText.click();
+String actualUrl=d.getCurrentUrl();
+assertEquals(actualUrl, "http://wom/v3staging/d2d/ClusterManager/view");
+}
 
 	
 

@@ -99,8 +99,7 @@ VeriFyDropDownIsEnabled(TerritoryDropDown);
 VeriFyDropDownIsEnabled(TerritoryDropDown);
 	}
 	
-	
-	
+
 	
 	public void VerifyIsTowersDropdownEnabled() {
 		// TODO Auto-generated method stub
