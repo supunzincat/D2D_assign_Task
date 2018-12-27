@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14622" started-at="2018-12-27T07:48:43Z" finished-at="2018-12-27T07:48:57Z">
+  <suite name="Default suite" duration-ms="27736" started-at="2018-12-27T11:53:23Z" finished-at="2018-12-27T11:53:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14622" started-at="2018-12-27T07:48:43Z" finished-at="2018-12-27T07:48:57Z">
+    <test name="Default test" duration-ms="27736" started-at="2018-12-27T11:53:23Z" finished-at="2018-12-27T11:53:51Z">
       <class name="testCases.TCestMyTask">
-        <test-method status="FAIL" signature="Verify_navigate_To_MY_Task()[pri:0, instance:testCases.TCestMyTask@29d89d5d]" name="Verify_navigate_To_MY_Task" duration-ms="1293" started-at="2018-12-27T13:18:43Z" finished-at="2018-12-27T13:18:44Z">
+        <test-method status="FAIL" signature="Verify_navigate_To_MY_Task()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="Verify_navigate_To_MY_Task" duration-ms="894" started-at="2018-12-27T17:23:23Z" finished-at="2018-12-27T17:23:24Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [http://wom/v3staging/user/user_dashbaord] but found [http://wom/v3staging/user/login]]]>
@@ -51,15 +51,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_navigate_To_MY_Task -->
-        <test-method status="PASS" signature="Verify_Navigate_TO_MyTask()[pri:0, instance:testCases.TCestMyTask@29d89d5d]" name="Verify_Navigate_TO_MyTask" duration-ms="12369" started-at="2018-12-27T13:18:44Z" finished-at="2018-12-27T13:18:57Z">
+        <test-method status="PASS" signature="Verify_Navigate_TO_MyTask()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="Verify_Navigate_TO_MyTask" duration-ms="26054" started-at="2018-12-27T17:23:24Z" finished-at="2018-12-27T17:23:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Navigate_TO_MyTask -->
-        <test-method status="PASS" signature="vrify_select_District()[pri:0, instance:testCases.TCestMyTask@29d89d5d]" name="vrify_select_District" duration-ms="441" started-at="2018-12-27T13:18:57Z" finished-at="2018-12-27T13:18:57Z">
+        <test-method status="PASS" signature="vrify_select_District()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="vrify_select_District" duration-ms="424" started-at="2018-12-27T17:23:50Z" finished-at="2018-12-27T17:23:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- vrify_select_District -->
-        <test-method status="PASS" signature="Verify_selectTerritorry()[pri:0, instance:testCases.TCestMyTask@29d89d5d]" name="Verify_selectTerritorry" duration-ms="419" started-at="2018-12-27T13:18:57Z" finished-at="2018-12-27T13:18:57Z">
+        <test-method status="PASS" signature="Verify_selectTerritorry()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="Verify_selectTerritorry" duration-ms="308" started-at="2018-12-27T17:23:51Z" finished-at="2018-12-27T17:23:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_selectTerritorry -->

@@ -66,6 +66,7 @@ SelectDDValues(Status, StatusTextBox, "ini");
 String x=District.getAttribute("title");
 System.out.println("value od x is>>"+x);
 assertEquals(x, "Colombo");
+//
 	}
 	
 	
