@@ -1,5 +1,7 @@
 package pages;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +14,9 @@ WebDriver driver;
 
 	//@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/div/div[1]/input")WebElement District;
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/button")WebElement District;
-	//*[@id="main-content"]/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/button
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/button/span[1]")WebElement Districtvalue;
+	
+	
 	
 	@FindBy(how=How.XPATH,using="//*[@id=\'main-content\']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/div/div[1]/input")WebElement DistrictTextBoxt;
 	
@@ -59,8 +63,9 @@ SelectDDValues(Status, StatusTextBox, "ini");
 	
 	public void getselectedvalue() {
 		// TODO Auto-generated method stub
-String x=District.getAttribute("filter-option pull-left");
+String x=District.getAttribute("title");
 System.out.println("value od x is>>"+x);
+assertEquals(x, "Colombo");
 	}
 	
 	
