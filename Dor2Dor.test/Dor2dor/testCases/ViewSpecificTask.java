@@ -102,8 +102,7 @@ public class ViewSpecificTask {
 			//TC002_verify_DistrictDD_Is_Disabled();
 			ViewTaskPage viewtask= new ViewTaskPage(driver);
 			viewtask.VerifyDistrictISDisabled();
-			
-			
+					
 		}
 		
 		@Test(priority=11)

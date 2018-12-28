@@ -34,23 +34,68 @@ public class TCestMyTask {
 		dashbord.NavigteToMyTask();
 //d.get("http://wom/v3staging/d2d/ClusterManager/view");
 //d.get("http://localhost/wom_v3/d2d/ClusterManager/view");
-MyTaskPage mytask= new MyTaskPage(d);
-mytask.SelectDistrict();
-mytask.getselectedvalue();
+
 
 	}
+	@Test(priority=2)
+	public void Verify_select_StartDate() {
+		// TODO Auto-generated method stub
+		MyTaskPage mytask= new MyTaskPage(d);
+		mytask.selectStartDate();
+		mytask.verifyStartDate();
+	}
+	
 	@Test(priority=3)
-	public void vrify_select_District() {
+	public void Verify_select_endDate() {
+		// TODO Auto-generated method stub
+		MyTaskPage mytask= new MyTaskPage(d);
+		mytask.EndDate();
+		mytask.verifyEndDate();
+		
+	}
+	
+	@Test(priority=4)
+	public void Verify_select_District() {
+		// TODO Auto-generated method stub
+		MyTaskPage mytask= new MyTaskPage(d);
+		mytask.SelectDistrict();
+		mytask.verifyDistrictValue();
+	}
+	
+	@Test(priority=5)
+	public void vrify_select_Territorry() {
 		// TODO Auto-generated method stub
 		MyTaskPage mytask= new MyTaskPage(d);
 		mytask.SelectTerritorry();
+		mytask.VerifyTerritorryValue();
 	}
-	@Test(priority=4)
-	public void Verify_selectTerritorry() {
+	@Test(priority=6)
+	public void Verify_select_Status() {
 		// TODO Auto-generated method stub
 		MyTaskPage mytask= new MyTaskPage(d);
 		mytask.SelectStaus();
-
+mytask.VerifyStatusyValue();
+	}
+	
+	@Test(priority=7)
+	public void Verify_click_sublit() {
+		// TODO Auto-generated method stub
+		MyTaskPage mytask= new MyTaskPage(d);
+mytask.verifySelctButton();
+	}
+	
+	@Test(priority=8)
+	public void Verify_Table_View() {
+		// TODO Auto-generated method stub
+		MyTaskPage mytask= new MyTaskPage(d);
+mytask.IsTableviewEnabled();
+	}
+	
+	@Test(priority=9)
+	public void Verify_Grid_View() {
+		// TODO Auto-generated method stub
+		MyTaskPage mytask= new MyTaskPage(d);
+mytask.IsGridviewEnabled();
 	}
 	
 }

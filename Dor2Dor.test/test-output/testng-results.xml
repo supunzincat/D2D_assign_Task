@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="4" passed="3">
+<testng-results skipped="0" failed="2" total="10" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27736" started-at="2018-12-27T11:53:23Z" finished-at="2018-12-27T11:53:51Z">
+  <suite name="Default suite" duration-ms="336567" started-at="2018-12-28T11:25:15Z" finished-at="2018-12-28T11:30:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27736" started-at="2018-12-27T11:53:23Z" finished-at="2018-12-27T11:53:51Z">
+    <test name="Default test" duration-ms="336567" started-at="2018-12-28T11:25:15Z" finished-at="2018-12-28T11:30:51Z">
       <class name="testCases.TCestMyTask">
-        <test-method status="FAIL" signature="Verify_navigate_To_MY_Task()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="Verify_navigate_To_MY_Task" duration-ms="894" started-at="2018-12-27T17:23:23Z" finished-at="2018-12-27T17:23:24Z">
+        <test-method status="FAIL" signature="Verify_navigate_To_MY_Task()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_navigate_To_MY_Task" duration-ms="945" started-at="2018-12-28T16:55:15Z" finished-at="2018-12-28T16:55:16Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [http://wom/v3staging/user/user_dashbaord] but found [http://wom/v3staging/user/login]]]>
@@ -51,18 +51,82 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_navigate_To_MY_Task -->
-        <test-method status="PASS" signature="Verify_Navigate_TO_MyTask()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="Verify_Navigate_TO_MyTask" duration-ms="26054" started-at="2018-12-27T17:23:24Z" finished-at="2018-12-27T17:23:50Z">
+        <test-method status="PASS" signature="Verify_Navigate_TO_MyTask()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_Navigate_TO_MyTask" duration-ms="8924" started-at="2018-12-28T16:55:16Z" finished-at="2018-12-28T16:55:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_Navigate_TO_MyTask -->
-        <test-method status="PASS" signature="vrify_select_District()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="vrify_select_District" duration-ms="424" started-at="2018-12-27T17:23:50Z" finished-at="2018-12-27T17:23:51Z">
+        <test-method status="PASS" signature="Verify_select_StartDate()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_select_StartDate" duration-ms="398" started-at="2018-12-28T16:55:24Z" finished-at="2018-12-28T16:55:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- vrify_select_District -->
-        <test-method status="PASS" signature="Verify_selectTerritorry()[pri:0, instance:testCases.TCestMyTask@40f1be1b]" name="Verify_selectTerritorry" duration-ms="308" started-at="2018-12-27T17:23:51Z" finished-at="2018-12-27T17:23:51Z">
+        </test-method> <!-- Verify_select_StartDate -->
+        <test-method status="PASS" signature="Verify_select_endDate()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_select_endDate" duration-ms="373" started-at="2018-12-28T16:55:25Z" finished-at="2018-12-28T16:55:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_selectTerritorry -->
+        </test-method> <!-- Verify_select_endDate -->
+        <test-method status="PASS" signature="Verify_select_District()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_select_District" duration-ms="465" started-at="2018-12-28T16:55:25Z" finished-at="2018-12-28T16:55:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_select_District -->
+        <test-method status="PASS" signature="vrify_select_Territorry()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="vrify_select_Territorry" duration-ms="597" started-at="2018-12-28T16:55:26Z" finished-at="2018-12-28T16:55:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- vrify_select_Territorry -->
+        <test-method status="PASS" signature="Verify_select_Status()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_select_Status" duration-ms="348" started-at="2018-12-28T16:55:26Z" finished-at="2018-12-28T16:55:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_select_Status -->
+        <test-method status="PASS" signature="Verify_click_sublit()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_click_sublit" duration-ms="158075" started-at="2018-12-28T16:55:27Z" finished-at="2018-12-28T16:58:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_click_sublit -->
+        <test-method status="FAIL" signature="Verify_Table_View()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_Table_View" duration-ms="143181" started-at="2018-12-28T16:58:05Z" finished-at="2018-12-28T17:00:28Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [table-count-wrap clearfix] but found [submit-form]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [table-count-wrap clearfix] but found [submit-form]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:178)
+	at org.testng.Assert.assertEquals(Assert.java:188)
+	at pages.MyTaskPage.IsTableviewEnabled(MyTaskPage.java:145)
+	at testCases.TCestMyTask.Verify_Table_View(TCestMyTask.java:91)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Table_View -->
+        <test-method status="PASS" signature="Verify_Grid_View()[pri:0, instance:testCases.TCestMyTask@6f2cb653]" name="Verify_Grid_View" duration-ms="23162" started-at="2018-12-28T17:00:28Z" finished-at="2018-12-28T17:00:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verify_Grid_View -->
       </class> <!-- testCases.TCestMyTask -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

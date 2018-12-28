@@ -5,6 +5,7 @@
     <classes>
       <class name="testCases.TCestMyTask">
         <methods>
+          <include name="Verify_Table_View"/>
           <include name="Verify_navigate_To_MY_Task"/>
         </methods>
       </class> <!-- testCases.TCestMyTask -->
