@@ -23,8 +23,7 @@ public class ViewSpecificTask {
 			//ViewTaskPage viewtask= new ViewTaskPage(driver);
 		
 		}
-		
-		
+				
 		
 		@Test(priority=2)
 		public void TC002_verify_DistrictDD_Is_Disabled() {

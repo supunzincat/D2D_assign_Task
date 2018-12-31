@@ -3,12 +3,27 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TCestMyTask">
+      <class name="testCases.ViewSpecificTask$TesClass">
         <methods>
-          <include name="Verify_Table_View"/>
-          <include name="Verify_navigate_To_MY_Task"/>
+          <include name="TC004_verify_Verify_DDGNDivisions_IS_Disabled"/>
+          <include name="TC0011_verify_DistrictDD_Is_Disabled_after_click_On_EDit"/>
+          <include name="TC008_VerifyDDTowersIs_Disaled"/>
+          <include name="TC006_verify_VerifyDDEnddateISEnabled_Is_Disabled"/>
+          <include name="TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick"/>
+          <include name="TC0012_verify_Terriotorry_Is_Disabled_after_click_On_EDit"/>
+          <include name="Verify_tower_CheckBox_is_enabled_after_click_on_edit_button"/>
+          <include name="TC007_VerifyTowersCheckboxISEnabled_Is_Disabled"/>
+          <include name="TC013_verify_GNDivision_DD_is_enabled_after_click_on_Edit_Button"/>
+          <include name="Verify_tower_Dropdown_is_enabled_after_click_on_edit_button"/>
+          <include name="TC014_VerifyStartDateIsEnabled_AftretClickOnEditButto"/>
+          <include name="TC003_verify_Verify_TerriotorryDD_Is_Disabled"/>
+          <include name="TC009_VerifyTextBoxRemarksTexIS_disabled"/>
+          <include name="Verify_End_Date_Is_Enabled_AftretClick_On_EditButto"/>
+          <include name="TC002_verify_DistrictDD_Is_Disabled"/>
+          <include name="TC001_verify_NavigateToEdittaskScreen"/>
+          <include name="TC005_verify_VerifyDDStartdateISEnabled_Is_Disabled"/>
         </methods>
-      </class> <!-- testCases.TCestMyTask -->
+      </class> <!-- testCases.ViewSpecificTask$TesClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
