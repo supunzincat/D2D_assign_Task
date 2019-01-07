@@ -28,6 +28,12 @@ public class ViewSpecificTask {
 		@Test(priority=2)
 		public void TC002_verify_DistrictDD_Is_Disabled() {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			driver.get("http://wom/v3staging/d2d/SingleTask/manage/4");
 			ViewTaskPage viewtask= new ViewTaskPage(driver);
 			viewtask.VerifyDistrictISDisabled();
@@ -127,39 +133,40 @@ public class ViewSpecificTask {
 		}
 		
 		@Test(priority=14)
-		private void Verify_End_Date_Is_Enabled_AftretClick_On_EditButto() {
+		private void TC_15_Verify_End_Date_Is_Enabled_AftretClick_On_EditButto() {
 			// TODO Auto-generated method stub
 			ViewTaskPage viewtask= new ViewTaskPage(driver);
 			viewtask.VerifyEndDateIsEnabled();
 		}
 		
 		@Test(priority=15)
-		private void Verify_tower_CheckBox_is_enabled_after_click_on_edit_button() {
+		private void TC_016_Verify_tower_CheckBox_is_enabled_after_click_on_edit_button() {
 			// TODO Auto-generated method stub
 			ViewTaskPage viewtask= new ViewTaskPage(driver);
 			viewtask.VerifyTowersCheckboxISEnabled();
 		}
 		@Test(priority=16)
-		private void Verify_tower_Dropdown_is_enabled_after_click_on_edit_button() {
+		private void TC_017_Verify_tower_Dropdown_is_enabled_after_click_on_edit_button() {
 			// TODO Auto-generated method stub
 			ViewTaskPage viewtask= new ViewTaskPage(driver);
 			viewtask.VerifyTowersDropDownISEnabled();
 		}
 		
 		@Test(priority=17)
-		public void TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick() {
+		public void TC018__VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClick() {
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			ViewTaskPage viewtask= new ViewTaskPage(driver);
 			viewtask.VerifyTextBoxRemarksTexISEnabled();
 			
 		}
 		
-		@Test(priority=17)
-		public void TC010_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClicktest() {
+		@Test(priority=18)
+		public void TC_0018_VerifyTextBoxRemarksTexISEnabled_Is_enableAfterClicktest() {
 //			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //			ViewTaskPage viewtask= new ViewTaskPage(driver);
 //			viewtask.VerifyTextBoxRemarksTexISEnabled();
 			//test
+			//driver.quit();
 			
 		}
 	

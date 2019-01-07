@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>     
+      <Username>//*[@id='username-validate']</Username>  
+      <pwd>/html/body/div[2]/form/div[1]/div[2]/input[2] </pwd> 
+      <signup> philadelphia-field-submit </signup>     
+ </menu>

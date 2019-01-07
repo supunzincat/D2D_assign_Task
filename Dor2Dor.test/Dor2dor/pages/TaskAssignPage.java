@@ -146,7 +146,7 @@ VeriFyDropDownIsEnabled(TowersDropDown);
 		SelectDropDown(GNDivisionDD, GNDivisionTextBox,"sedawa");
 		String s=GNDivisionDD.getText();
 		System.out.println("text gndivisions value is "+s);
-		assertEquals(s, "Kalubovila");
+		assertEquals(s, "Sedawatta");
 	}
 	
 	

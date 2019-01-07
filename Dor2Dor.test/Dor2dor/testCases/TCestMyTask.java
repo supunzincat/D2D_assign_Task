@@ -98,4 +98,10 @@ mytask.IsTableviewEnabled();
 mytask.IsGridviewEnabled();
 	}
 	
+	@Test(priority=10)
+	public void TC_01Quit() {
+		// TODO Auto-generated method stub
+//d.quit();
+	}
+	
 }

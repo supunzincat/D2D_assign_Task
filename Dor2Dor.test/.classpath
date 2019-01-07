@@ -15,5 +15,7 @@
 	<classpathentry kind="lib" path="D:/configSelenium/Selenium3.14/libs/httpcore-4.4.9.jar"/>
 	<classpathentry kind="lib" path="D:/configSelenium/Selenium3.14/libs/okhttp-3.10.0.jar"/>
 	<classpathentry kind="lib" path="D:/configSelenium/Selenium3.14/libs/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="D:/configSelenium/dom4j-1.6.jar/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="D:/configSelenium/jaxen-1.1.1.jar/jaxen-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

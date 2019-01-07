@@ -1,5 +1,6 @@
 package testCases;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -14,11 +15,18 @@ public class TC_AssignTasks {
 	WebDriver d=LaunchWebDriver.WebdriverLaunch();
 	
 	@Test(priority=1)
-	public void TC_001_verify_User_Able_TO_Navigate_Dashboard() {
+	public void TC_001_verify_User_Able_TO_Navigate_Dashboard() 
+	{
 		// TODO Auto-generated method stub
 		LoginPage Login= new LoginPage(d);
 		Login.LoginToWom();
 	}
+//	public void TC_001_verify_User_Able_TO_Navigate_Dashboard2() 
+//	{
+//		// TODO Auto-generated method stub
+//		LoginPage Login= new LoginPage(d);
+//		Login.LoginToWom("abc", "xyz");
+//	}
 	
 	
 	@Test(priority=2)
@@ -26,7 +34,11 @@ public void TC_002_Verify_navigateTo_assignTask() {
 	// TODO Auto-generated method stub
 		DshboardPage dashbord= new DshboardPage(d);
 		dashbord.NavigateToasignTask();
+		d.findElement(By.xpath("//select[@id='depot']")).isEnabled();
 }
+	
+	
+	
 	
 	@Test(priority=3)
 	public void TC003_VerifyIs_District_DropdownEnabled() {
