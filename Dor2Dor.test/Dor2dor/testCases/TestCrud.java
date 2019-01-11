@@ -1,6 +1,9 @@
 package testCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.SendKeysAction;
 import org.testng.annotations.Test;
 
 import driverlaunch.LaunchWebDriver;
@@ -34,10 +37,52 @@ public void TC002_Verify_Navigate_To_Crud() {
 }
 
 @Test(priority=3)
-public void TC_003_Verify_add_new_record(){
+public void TC_003_Verify_messageBox(){
 	// TODO Auto-generated method stub
+	//driver.get("http://wom/v3staging/SingleWorkOrder/view/791669");
+	
 CRUD crd= new CRUD(driver);
+//crd.clickupdate();
 crd.ClickOnAddNewButton();
+crd.verifycanclebutton();
+//crd.ClickOnAddNewButton();
+//crd.verifymessagebox();
 }
 
+@Test(priority=4)
+public void TC_004_Verify__messageBox(){
+	// TODO Auto-generated method stub
+	//driver.get("http://wom/v3staging/SingleWorkOrder/view/791669");
+	
+CRUD crd= new CRUD(driver);
+//crd.clickupdate();
+crd.ClickOnAddNewButton();
+crd.verifymessagebox();
+crd.verifycanclebutton();
+
+//driver.quit();
+}
+
+
+@Test(priority=5)
+public void TC_005_Verify_fillform(){
+	// TODO Auto-generated method stub
+	//driver.get("http://wom/v3staging/SingleWorkOrder/view/791669");
+	
+CRUD crd= new CRUD(driver);
+//crd.clickupdate();
+crd.ClickOnAddNewButton();
+crd.fillform();
+driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+crd.verifysucsessmessage();
+//driver.quit();
+}
+
+@Test(priority=6)
+public void TC_006_verify_added_record_is_displayed() {
+	// TODO Auto-generated method stub
+	CRUD crd= new CRUD(driver);
+	crd.verifyaddedvalue();
+
+}
 }

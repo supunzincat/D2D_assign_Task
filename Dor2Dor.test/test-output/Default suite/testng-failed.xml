@@ -3,15 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_AssignTasks">
+      <class name="testCases.TestCrud">
         <methods>
-          <include name="Tc_015_verify_SubmitSuccessFully"/>
-          <include name="TC_008_select_Terriotorry"/>
-          <include name="Tc_013_verify_Confirm_message"/>
-          <include name="close"/>
-          <include name="Tc_014_verify_Cancle_Submission"/>
+          <include name="TC_005_Verify_fillform"/>
         </methods>
-      </class> <!-- testCases.TC_AssignTasks -->
+      </class> <!-- testCases.TestCrud -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
