@@ -24,6 +24,7 @@ public class DshboardPage  {
 	@FindBy (how=How.XPATH,using="//*[contains(text(),'Assign Task')]") WebElement AsignTaskSubmenue;
 	@FindBy(how=How.XPATH,using="//*[contains(text(),'My Tasks')]") WebElement MYTaskText;
 	@FindBy(how=How.XPATH,using="//*[contains(text(),'Depots to territory managers')]")  WebElement DeportsToTerritorryManager;
+	@FindBy(how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/ul[9]/li/a")  WebElement SubtaskList;
 	
 	
 	
@@ -56,6 +57,7 @@ AsignTaskSubmenue.click();
 		// TODO Auto-generated method stub
 DooorToDoorTab.click();
 	}
+	
 public void NavigteToMyTask() {
 	// TODO Auto-generated method stub
 MYTaskText.click();
@@ -70,4 +72,10 @@ assertEquals(actualUrl, "http://wom/v3staging/d2d/ClusterManager/view");
 		assertEquals(actualUrl, "http://wom/v3staging/d2d/UpdateTerritoryManagers/view");
 	}
 
+	public void NavigateTOSelectSubtaskList() {
+		// TODO Auto-generated method stub
+		SubtaskList.click();
+		String actualUrl=d.getCurrentUrl();
+		assertEquals(actualUrl, "http://wom/v3staging/d2d/SubTaskList/view");
+	}
 }
