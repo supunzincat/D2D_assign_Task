@@ -26,11 +26,12 @@ public void TC001_Verify_Navigate_TO_SubtaskList() {
 public void TC001_Verify_SelectDD() {
 	// TODO Auto-generated method stub
 	Page_SubtaskListView subtask= new Page_SubtaskListView(driver);
-	subtask.selectALLDropdownValues();
 	subtask.selectalldates();
-
-}
+	subtask.selectALLDropdownValues();
+	subtask.submit();
+	subtask.verifyselectedvalue();
 
 
 //selectALLDropdownValues
+}
 }

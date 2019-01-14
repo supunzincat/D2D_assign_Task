@@ -1,5 +1,9 @@
 package pages;
 
+import static org.testng.Assert.assertEquals;
+
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +31,10 @@ public class Page_SubtaskListView {
 	@FindBy(how=How.XPATH,using="//*[@id=\"d2d-sub-task-list-sdate\"]")WebElement StartDate;
 	@FindBy(how=How.XPATH,using="//*[@id=\"d2d-sub-task-list-edate\"]")WebElement EndDate;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='d2d-task-save-btn']")WebElement SubmitButton;
 	
+	
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[2]/section/div/div[1]/table/tbody/tr/td[1]")WebElement Subtaskname;
 	
 	public Page_SubtaskListView(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -60,17 +67,51 @@ public class Page_SubtaskListView {
 	}
 	
 	
-	public void Selectdate(WebElement datePiker) {
+	public void SelectStartdate(WebElement datePiker) {
 		// TODO Auto-generated method stub
+//datePiker.click();
+datePiker.clear();
+datePiker.click();
+//datePiker.sendKeys(Keys.ARROW_RIGHT);
+datePiker.sendKeys("2018-11-01");
+
+//datePiker.sendKeys(Keys.ENTER);
+	}
+	
+	
+	public void SelectEnddate(WebElement datePiker) {
+		// TODO Auto-generated method stub
+
 datePiker.click();
 datePiker.sendKeys(Keys.ARROW_RIGHT);
+
 datePiker.sendKeys(Keys.ENTER);
 	}
 	
 	public void selectalldates() {
 		// TODO Auto-generated method stub
-		Selectdate(StartDate);
-		Selectdate(EndDate);
+		SelectStartdate(StartDate);
+		SelectEnddate(EndDate);
+	}
+	
+	public void submit() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		SubmitButton.click();
+	}
+	
+	
+	public void verifyselectedvalue() {
+		// TODO Auto-generated method stub
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+String x=Subtaskname.getText();
+System.out.println("subtask name is"+ x);
+assertEquals(x,"Sub Task 5");
 	}
 	
 }
