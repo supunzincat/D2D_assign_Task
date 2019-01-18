@@ -36,6 +36,12 @@ public class Page_SubtaskListView {
 	
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[2]/section/div/div[1]/table/tbody/tr/td[1]")WebElement Subtaskname;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[2]/section/div/div[1]/table/tbody/tr/td[1]/a")WebElement Subtaskvalue;
+	@FindBy(how=How.XPATH,using="//*[@id='container']/div[5]/div/div/div")WebElement popup;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='container']/div[5]/div/div/div/div[1]/div[1]/div[1]/h4")WebElement TaskName;
+	String ExpectedTaskName="Task ID : 17";
+	
 	public Page_SubtaskListView(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		this.driver= driver;
@@ -114,4 +120,27 @@ System.out.println("subtask name is"+ x);
 assertEquals(x,"Sub Task 5");
 	}
 	
+	public void ClickonSutask() {
+		// TODO Auto-generated method stub
+		Subtaskvalue.click();
+		popup.isDisplayed();
+	}
+	
+	public void ContentText(WebElement TextName,String expectedvalue) {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String value=TextName.getText();
+		assertEquals(value, expectedvalue);
+	}
+	
+	public void verifyTaskname() {
+		// TODO Auto-generated method stub
+		ContentText(TaskName, ExpectedTaskName);
+
+	}
 }

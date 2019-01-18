@@ -5,7 +5,8 @@
     <classes>
       <class name="testCases.TC_ViewSubtaskList">
         <methods>
-          <include name="TC001_Verify_SelectDD"/>
+          <include name="TC003_Verify_view_subtask_popup"/>
+          <include name="TC004_Verify_subtask_Name"/>
         </methods>
       </class> <!-- testCases.TC_ViewSubtaskList -->
     </classes>
