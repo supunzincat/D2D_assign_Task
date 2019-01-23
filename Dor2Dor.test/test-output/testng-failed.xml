@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_ViewSubtaskList">
+      <class name="testCases.TC_TerritorryManagerTasks">
         <methods>
-          <include name="TC003_Verify_view_subtask_popup"/>
-          <include name="TC004_Verify_subtask_Name"/>
+          <include name="TC_002_verify_User"/>
         </methods>
-      </class> <!-- testCases.TC_ViewSubtaskList -->
+      </class> <!-- testCases.TC_TerritorryManagerTasks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

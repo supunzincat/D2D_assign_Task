@@ -1,5 +1,6 @@
 package testCases;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,7 @@ public class ViewSpecificTask {
 		WebDriver driver= LaunchWebDriver.WebdriverLaunch();
 		
 		@Test(priority=1)
-		public void TC001_verify_NavigateToEdittaskScreen() {
+		public void TC001_verify_NavigateToEdittaskScreen() throws IOException {
 			LoginPage Login= new LoginPage(driver);
 			Login.LoginToWom();		
 			//driver.get("http://wom/v3staging/d2d/SingleTask/manage/4");

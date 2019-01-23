@@ -113,7 +113,7 @@ ddtextbox.sendKeys(Keys.ENTER);
 		}
 selectdd(Username, usernametextbox, "root");
 
-selectdd(Territory, territorytextbox, "awi");
+selectdd(Territory, territorytextbox, "neg");
 addbutton.click();
 //verifysucsessmessage();
 

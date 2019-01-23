@@ -1,5 +1,7 @@
 package testCases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -8,17 +10,17 @@ import pages.DshboardPage;
 import pages.LoginPage;
 import pages.Page_SubtaskListView;
 
-public class TC_ViewSubtaskList {
+public class TC_AgentTaskView {
 WebDriver driver= LaunchWebDriver.WebdriverLaunch();
 
 @Test(priority=1)
-public void TC001_Verify_Navigate_TO_SubtaskList() {
+public void TC001_Verify_Navigate_TO_SubtaskList() throws IOException {
 	// TODO Auto-generated method stub
 	LoginPage log= new LoginPage(driver);
 	log.LoginToWom();
 	DshboardPage dsh= new DshboardPage(driver);
 	dsh.ClickOnDortoDor();
-	dsh.NavigateTOSelectSubtaskList();
+	dsh.NavigatwToAgentTaskPage();
 
 }
 

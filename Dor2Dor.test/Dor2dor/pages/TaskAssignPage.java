@@ -193,14 +193,14 @@ Selectdate(EndDate);
 	public void ClickOnCancleButton() {
 		// TODO Auto-generated method stub
 		try {
-			Thread.sleep(500);
+			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		MessageBoxcanclebutton.click();
 		try {
-			Thread.sleep(500);
+			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

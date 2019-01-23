@@ -1,5 +1,6 @@
 package testCases;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,7 @@ public class TestCrud
 {WebDriver driver = LaunchWebDriver.WebdriverLaunch();
 
 @Test(priority=1)
-public void TC_001_verify_User_Able_TO_Navigate_Dashboard() {
+public void TC_001_verify_User_Able_TO_Navigate_Dashboard() throws IOException {
 	// TODO Auto-generated method stub
 	LoginPage Login= new LoginPage(driver);
 	Login.LoginToWom();

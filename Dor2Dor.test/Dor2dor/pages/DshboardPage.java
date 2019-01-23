@@ -21,11 +21,15 @@ public class DshboardPage  {
 	@FindBy (how=How.XPATH,using="//*[contains(text(),'DOOR TO DOOR')]") WebElement DooorToDoorTab;
 	
 	//@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/ul[5]/li/a") WebElement AsignTaskSubmenue;
-	@FindBy (how=How.XPATH,using="//*[contains(text(),'Assign Task')]") WebElement AsignTaskSubmenue;
-	@FindBy(how=How.XPATH,using="//*[contains(text(),'My Tasks')]") WebElement MYTaskText;
-	@FindBy(how=How.XPATH,using="//*[contains(text(),'Depots to territory managers')]")  WebElement DeportsToTerritorryManager;
-	@FindBy(how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/ul[9]/li/a")  WebElement SubtaskList;
+	@FindBy (how=How.XPATH,using="//*[contains(text(),'Sales Planning')]") WebElement AsignTaskSubmenue;
+	@FindBy(how=How.XPATH,using="//*[contains(text(),'Assigned Tasks')]") WebElement MYTaskText;
+	@FindBy(how=How.XPATH,using="//*[contains(text(),'TM Territory Allocation')]")  WebElement DeportsToTerritorryManager;
 	
+	@FindBy(how=How.XPATH,using="//*[contains(text(),'Agent Task View')]")  WebElement AgentTaskView;
+	String AgentTaskViewUrl="http://wom/v3staging/d2d/SubTaskList/view";
+	
+	@FindBy(how=How.XPATH,using="//*[contains(text(),'Territory Manager Tasks')]") WebElement TerritorryManagerTasks;
+	String TerritorryManagerTasksUrl="http://wom/v3staging/d2d/TerritoryManager/view";
 	
 	
 	
@@ -72,7 +76,17 @@ assertEquals(actualUrl, "http://wom/v3staging/d2d/ClusterManager/view");
 		assertEquals(actualUrl, "http://wom/v3staging/d2d/UpdateTerritoryManagers/view");
 	}
 
-	public void NavigateTOSelectSubtaskList() {
+	public void NavigatwToAgentTaskPage() {
+
+		navigatetosubmenu(AgentTaskView, AgentTaskViewUrl);
+	}
+	
+	public void navigatetoTerritoryManagarTask() {
+		// TODO Auto-generated method stub
+navigatetosubmenu(TerritorryManagerTasks, TerritorryManagerTasksUrl);
+	}
+	
+	public void navigatetosubmenu(WebElement listItem,String CurrentUrl) {
 		// TODO Auto-generated method stub
 		try {
 			Thread.sleep(500);
@@ -80,8 +94,9 @@ assertEquals(actualUrl, "http://wom/v3staging/d2d/ClusterManager/view");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		SubtaskList.click();
+		listItem.click();
 		String actualUrl=d.getCurrentUrl();
-		assertEquals(actualUrl, "http://wom/v3staging/d2d/SubTaskList/view");
+		assertEquals(actualUrl, CurrentUrl);
+		
 	}
 }

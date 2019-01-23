@@ -1,5 +1,7 @@
 package testCases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
@@ -13,7 +15,7 @@ public class TCestMyTask {
 	WebDriver d= LaunchWebDriver.WebdriverLaunch();
 	
 	@Test(priority=1)
-	public void TC_001_Verify_navigate_To_wom() {
+	public void TC_001_Verify_navigate_To_wom() throws IOException {
 		// TODO Auto-generated method stubLoginPage Login= new LoginPage(d);
 		
 		LoginPage Login= new LoginPage(d);

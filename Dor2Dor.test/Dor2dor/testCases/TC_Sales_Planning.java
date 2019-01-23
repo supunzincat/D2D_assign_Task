@@ -1,5 +1,7 @@
 package testCases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeSuite;
@@ -10,12 +12,12 @@ import pages.DshboardPage;
 import pages.LoginPage;
 import pages.TaskAssignPage;
 
-public class TC_AssignTasks {
+public class TC_Sales_Planning {
 	
 	WebDriver d=LaunchWebDriver.WebdriverLaunch();
 	
 	@Test(priority=1)
-	public void TC_001_verify_User_Able_TO_Navigate_Dashboard() 
+	public void TC_001_verify_User_Able_TO_Navigate_Dashboard() throws IOException 
 	{
 		// TODO Auto-generated method stub
 		LoginPage Login= new LoginPage(d);
@@ -156,7 +158,7 @@ public void TC_002_Verify_navigateTo_assignTask() {
 		TaskAssignPage taskAssign= new TaskAssignPage(d);
 		taskAssign.ClickOnCancleButton();
 		try {
-			Thread.sleep(500);
+			Thread.sleep(200);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
