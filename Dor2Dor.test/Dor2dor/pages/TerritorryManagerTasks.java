@@ -1,7 +1,7 @@
 package pages;
 
 import static org.testng.Assert.assertEquals;
-
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,6 +29,24 @@ public class TerritorryManagerTasks {
 	
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[4]/div/div/label") WebElement StatusLocator;
 	String StatusText="Status";
+	
+	@FindBy(how=How.XPATH,using="//*[@id='cluster_order_by_label']") WebElement OnlyexpirdtasktextLocator;
+	String onlyexpiredtaskText="Only expired tasks";
+	
+	@FindBy(how=How.XPATH,using="//*[@id='d2d-task-list-sdate']") WebElement StartDateLocator;
+	String StartDateValue="2018-01-25";
+		
+	@FindBy(how=How.XPATH,using="//*[@id='d2d-task-list-edate']") WebElement EndDateLocator;
+	String EndDateDateValue="2019-02-23";
+	
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/button/span[1]") WebElement DropdownTerritoryLocator;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/div/input") WebElement DropdownTerritoryTextBox;
+	String TerritoryName="AWI";
+	
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[4]/div/div/div/div/button/span[1]") WebElement DropdownStatusLocator;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[4]/div/div/div/div/div/div[1]/input") WebElement DropdownStatusTextBox;
+	String DropDownStatus="assi";
+	
 	
 	public TerritorryManagerTasks(WebDriver driver) {
 		// TODO Auto-generated constructor stuth
@@ -85,4 +103,44 @@ VerifyText(TerritorryLocator, TerritoryText);
 		// TODO Auto-generated method stub
 VerifyText(StatusLocator, StatusText);
 	}
+	
+	public void OnlyExpiredTaskText() {
+		// TODO Auto-generated method stub
+VerifyText(OnlyexpirdtasktextLocator, onlyexpiredtaskText);
+	}
+	
+	public void EnterDate(WebElement EnterDateName ,String enterdatevalue) {
+		// TODO Auto-generated method stub
+EnterDateName.click();
+EnterDateName.clear();
+EnterDateName.sendKeys(enterdatevalue);
+	}	
+	
+	public void EnerStarDate() {
+		// TODO Auto-generated method stub
+EnterDate(StartDateLocator, StartDateValue);
+	}
+	
+	public void EnerEndDate() {
+		// TODO Auto-generated method stub
+EnterDate(EndDateLocator, EndDateDateValue);
+	}
+	
+	public void EnterValuesForDropdown(WebElement DropDownName,WebElement DropdownTextBoX,String DropdownValue) {
+		// TODO Auto-generated method stu
+		DropDownName.click();
+		DropdownTextBoX.sendKeys(DropdownValue);
+		DropdownTextBoX.sendKeys(Keys.RETURN);
+	}
+	
+	public void selectTerritoryValueFromDropdown() {
+		// TODO Auto-generated method stub
+EnterValuesForDropdown(DropdownTerritoryLocator, DropdownTerritoryTextBox, TerritoryName);
+	}
+
+	public void selectStatusValue() {
+		// TODO Auto-generated method stub
+EnterValuesForDropdown(DropdownStatusLocator, DropdownStatusTextBox,DropDownStatus);
+	}
+
 }

@@ -65,4 +65,41 @@ public class TC_TerritorryManagerTasks {
 		page.VerifyStatusText();
 	}
 
+	@Test(priority=8)
+	public void TC_008_verif_OnlyExpiredTsks_Text() {
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.OnlyExpiredTaskText();
+	}
+	
+	
+	@Test(priority=9)
+	public void TC_009_verif_EnerStarDate() {
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.EnerStarDate();
+	}
+	
+	@Test(priority=10)
+	public void TC_010_verif_EnerEndDate() {
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.EnerEndDate();
+	}
+	
+	
+	@Test(priority=11)
+	public void TC_011_verif_SelectTerritoryValue() {
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.selectTerritoryValueFromDropdown();
+	}
+
+	@Test(priority=12)
+	public void TC_012_verif_selectStatusValue() {
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.selectStatusValue();
+	}
+	
 }
