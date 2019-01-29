@@ -24,49 +24,49 @@ public class TC_TerritorryManagerTasks {
 }
 	
 	@Test(priority=2)
-	public void TC_002_verify_User() {
+	public void TC_002_verify_User() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
-		page.VeriUsername();
+		page.VerifyUsername();
 	}
 	
 	@Test(priority=3)
-	public void TC_003_verify_header_text() {
+	public void TC_003_verifNamw_Of_The_Page() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.VerifyNameOfThePage();
 	}
 	
 	@Test(priority=4)
-	public void TC_004_verify_Start_From_Date_Text() {
+	public void TC_004_verify_Start_From_Date_Text() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
-		page.VerifyStartdate();
+		page.verifyLableOfStartdate();
 	}
 	
 	@Test(priority=5)
-	public void TC_005_verify_End_Date_text() {
+	public void TC_005_verify_End_Date_text() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.VerifyEnddate();
 	}
 	
 	@Test(priority=6)
-	public void TC_006_verify_Territory_Text() {
+	public void TC_006_verify_Territory_Text() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.VerifyTerritoryText();
 	}
 	
 	@Test(priority=7)
-	public void TC_007_verify_Status_Text() {
+	public void TC_007_verify_Status_Text() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.VerifyStatusText();
 	}
 
 	@Test(priority=8)
-	public void TC_008_verif_OnlyExpiredTsks_Text() {
+	public void TC_008_verif_OnlyExpiredTsks_Text() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.OnlyExpiredTaskText();
@@ -74,14 +74,14 @@ public class TC_TerritorryManagerTasks {
 	
 	
 	@Test(priority=9)
-	public void TC_009_verif_EnerStarDate() {
+	public void TC_009_verif_EnerStarDate() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
-		page.EnerStarDate();
+		page.validateEnteredStartDate();
 	}
 	
 	@Test(priority=10)
-	public void TC_010_verif_EnerEndDate() {
+	public void TC_010_verif_EnerEndDate() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.EnerEndDate();
@@ -89,17 +89,39 @@ public class TC_TerritorryManagerTasks {
 	
 	
 	@Test(priority=11)
-	public void TC_011_verif_SelectTerritoryValue() {
+	public void TC_011_verif_SelectTerritoryValue() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.selectTerritoryValueFromDropdown();
 	}
 
 	@Test(priority=12)
-	public void TC_012_verif_selectStatusValue() {
+	public void TC_012_verif_selectStatusValue() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.selectStatusValue();
+	}
+	
+	@Test(priority=13)
+	public void TC_013_verif_SubmitButton(){
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.veriFySubmitButton();
+	}
+	
+	@Test(priority=14)
+	public void TC_014_verif_Defaultview(){
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.verifyTableViewRadioButton();
+	}
+	
+	@Test(priority=15)
+	public void TC_015_verif_GridviewIsEnabled(){
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.GridviewIsEnabled();
+		driver.quit();
 	}
 	
 }

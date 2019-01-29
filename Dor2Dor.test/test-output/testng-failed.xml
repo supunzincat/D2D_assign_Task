@@ -5,18 +5,7 @@
     <classes>
       <class name="testCases.TC_TerritorryManagerTasks">
         <methods>
-          <include name="TC_007_verify_Status_Text"/>
-          <include name="TC_011_verif_SelectTerritoryValue"/>
-          <include name="TC_010_verif_EnerEndDate"/>
-          <include name="TC_003_verify_header_text"/>
-          <include name="TC_004_verify_Start_From_Date_Text"/>
           <include name="TC_008_verif_OnlyExpiredTsks_Text"/>
-          <include name="TC_005_verify_End_Date_text"/>
-          <include name="TC_006_verify_Territory_Text"/>
-          <include name="TC_009_verif_EnerStarDate"/>
-          <include name="TC_012_verif_selectStatusValue"/>
-          <include name="TC001_Verify_Navigate_TO_Territorry_Manager_Task"/>
-          <include name="TC_002_verify_User"/>
         </methods>
       </class> <!-- testCases.TC_TerritorryManagerTasks -->
     </classes>

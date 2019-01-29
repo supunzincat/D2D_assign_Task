@@ -19,6 +19,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import driverlaunch.DataLoader;
+
 public class LoginPage {
 	WebDriver driver;
 	
@@ -67,9 +69,11 @@ public class LoginPage {
 //			
 //			
 //		}
-		Properties prop =new Properties();
-		FileInputStream ip= new FileInputStream("C:\\Users\\supun_zincat\\git\\D2D_assign_Task\\Dor2Dor.test\\Dor2dor\\dataprovider\\logindetails.properties");
-		prop.load(ip);
+		DataLoader dataloader= new DataLoader();
+		Properties prop =dataloader.LoadLogginData();
+//		Properties prop =new Properties();
+//		FileInputStream ip= new FileInputStream("C:\\Users\\supun_zincat\\git\\D2D_assign_Task\\Dor2Dor.test\\Dor2dor\\dataprovider\\logindetails.properties");
+//		prop.load(ip);
 		
 		System.out.println(prop.getProperty("username"));
 		Username.sendKeys(prop.getProperty("username"));
