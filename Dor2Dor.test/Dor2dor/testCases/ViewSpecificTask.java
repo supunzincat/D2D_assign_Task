@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import driverlaunch.LaunchWebDriver;
+import Config.LaunchWebDriver;
 import pages.LoginPage;
 import pages.ViewTaskPage;
 

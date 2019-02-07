@@ -13,7 +13,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import driverlaunch.DataLoader;
+import Config.DataLoader;
+import proxy.verifications;
 
 public class TerritorryManagerTasks {
 
@@ -96,23 +97,32 @@ public class TerritorryManagerTasks {
 
 
 
+//	public void VerifyText(WebElement EnterFildForValidate,String enterExpectedValueForValidate) throws IOException {
+//		String valueoftext=EnterFildForValidate.getText();
+//		assertEquals(valueoftext,enterExpectedValueForValidate);
+//		//System.out.println(valueoftext);
+//	}
+
+	verifications veriGl= new verifications();
+	
+	
+	
+	
 	public void VerifyText(WebElement EnterFildForValidate,String enterExpectedValueForValidate) throws IOException {
-		// TODO Auto-generated method stub
-		//StartFormText.click();
-		//DataLoader dl= new DataLoader();
-//	Properties prop=dl.LoadDataToTerritorryMangerTasks();
-String valueoftext=EnterFildForValidate.getText();
-assertEquals(valueoftext,enterExpectedValueForValidate);
-//assertEquals(x,prop.getProperty("enddate"));
-System.out.println(valueoftext);
-//setTime(prop.getProperty("enddate"));
-
+		String valueoftext=EnterFildForValidate.getText();
+		 assertEquals(valueoftext,enterExpectedValueForValidate);
+		//System.out.println(valueoftext);
+	//	 veriGl.VerifyTextgloble(EnterFildForValidate, enterExpectedValueForValidate);
 	}
-
+	
+	
 	public void VerifyUsername() throws IOException {
 		// TODO Auto-generated method stub
 		Properties prop= dl.LoadDataToTerritorryMangerTasks();
-		VerifyText(Username, prop.getProperty("un"));
+//	VerifyText(Username, prop.getProperty("un"));
+	
+		veriGl.VerifyTextgloble(Username, prop.getProperty("un"));
+		System.out.println(prop.getProperty("un"));
 	}
 	
 	public void VerifyNameOfThePage() throws IOException {

@@ -1,4 +1,4 @@
-package driverlaunch;
+package Config;
 
 import java.sql.ResultSet;
 

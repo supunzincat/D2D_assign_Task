@@ -5,12 +5,13 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import driverlaunch.LaunchWebDriver;
+import Config.LaunchWebDriver;
 import pages.DshboardPage;
 import pages.LoginPage;
 import pages.TerritorryManagerTasks;
+import proxy.verifications;
 
-public class TC_TerritorryManagerTasks {
+public class TS_003_TerritorryManagerTasks {
 	WebDriver driver= LaunchWebDriver.WebdriverLaunch();
 
 	@Test(priority=1)
@@ -28,6 +29,8 @@ public class TC_TerritorryManagerTasks {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.VerifyUsername();
+		
+		
 	}
 	
 	@Test(priority=3)
@@ -121,7 +124,7 @@ public class TC_TerritorryManagerTasks {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.GridviewIsEnabled();
-		driver.quit();
+		//driver.quit();
 	}
 	
 }

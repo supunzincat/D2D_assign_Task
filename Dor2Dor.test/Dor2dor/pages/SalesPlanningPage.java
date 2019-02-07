@@ -5,6 +5,8 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.awt.RenderingHints.Key;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -16,9 +18,14 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class TaskAssignPage {
+import Config.DataLoader;
+import proxy.verifications;
+
+public class SalesPlanningPage {
 
 	WebDriver d;
+	verifications verify= new verifications();
+	DataLoader dl= new DataLoader();
 	
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-taskassign-top-wrap']/div[3]/div[1]/label/span") WebElement ShowPrevisitsCheckbox;
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-taskassign-top-wrap']/div[3]/div[2]/label/span") WebElement TopTenGNDivisions;
@@ -31,8 +38,11 @@ public class TaskAssignPage {
 	@FindBy(how=How.XPATH,using="//*[@id='sdate']") WebElement StartdateDatePiker;
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[5]/div/input") WebElement EnddateDatePiker;
 	@FindBy(how=How.XPATH,using="//*[@id='remarks']") WebElement RemarksTextField;
-	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[7]/label/span") WebElement TowersCheckBox;
-	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/div/div") WebElement TowersDropDown;
+	//@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/label") WebElement TowersCheckBoxLocation;
+	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/label/span") WebElement TowerCheckbox;
+	
+	//@FindBy(how=How.XPATH,using="//*[@id='js-filter_map_towers']") WebElement TowerCheckbox;
+	@FindBy(how=How.XPATH,using="//*[@id='js-filter_map_towers']") WebElement TowersDropDown;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[1]/div/div/div/div/input") WebElement DistrictDDTextbox;
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[3]/div/div/button/span[1]") WebElement GNDivisionDD;
@@ -61,13 +71,24 @@ public class TaskAssignPage {
 	
 	@FindBy(how=How.XPATH,using="") WebElement VerifySuccessMessage;
 	
-	
-	public void verifytowerDDenable() {
-		// TODO Auto-generated method stub
-TowersDropDown.isSelected();
+	public enum Status {
+	    enable,
+	    disble
 	}
 	
-	public TaskAssignPage(WebDriver d) {
+	
+	public void verifytowerDDStatus(Status statusof) {
+		// TODO Auto-generated method stub
+		if (statusof==Status.enable) {
+			verify.verifyElementIsEnabled(Status.disble, TowersDropDown);	
+		}
+		
+		else if (statusof==Status.disble) {
+			verify.verifyElementIsEnabled(Status.disble, TowersDropDown);	
+		}
+		}
+	
+	public SalesPlanningPage(WebDriver d) {
 		// TODO Auto-generated constructor stub
 		this.d=d;
 		PageFactory.initElements(d, this);
@@ -125,28 +146,27 @@ VeriFyDropDownIsEnabled(TowersDropDown);
 	}
 	
 	
-	public void selectDistrict() {
-		// TODO Auto-generated method stub
-		SelectDropDown(DistrictDropDown, DistrictDDTextbox,"Colombo");
-		String s=DistrictDropDown.getText();
-		System.out.println("text district value is "+s);
-		assertEquals(s, "Colombo");
+	public void verifySelectedDistrict() throws IOException {
+		// TODO Auto-generated method stu
+		Properties prop=dl.LoadDataToSalesPlanning();
+		verify.SelectDropDown(DistrictDropDown, DistrictDDTextbox,prop.getProperty("selectColombo"),prop.getProperty("ExpectingColombo"));
 	}
 	
-	public void selectTerriotarry() {
-		// TODO Auto-generated method stub
-		SelectDropDown(TerritoryDropDown, TerriotorryTextBox,"Col");
-		String s=TerritoryDropDown.getText();
-		System.out.println("text Terriotarry value is "+s);
-		assertEquals(s, "COL - Colombo Depot");
+	public void verifySelectedTerriotarry() throws IOException {
+		// TODO Auto-generated method stub  enterTerritory 
+		Properties prop=dl.LoadDataToSalesPlanning();
+		verify.SelectDropDown(TerritoryDropDown, TerriotorryTextBox, prop.getProperty("enterTerritory"),prop.getProperty("ExpectedTerritorry"));
+
 	}
 	
-	public void selectGNDivision() {
+	public void verifySelectedselectGNDivision() throws IOException {
 		// TODO Auto-generated method stub
-		SelectDropDown(GNDivisionDD, GNDivisionTextBox,"sedawa");
-		String s=GNDivisionDD.getText();
-		System.out.println("text gndivisions value is "+s);
-		assertEquals(s, "Sedawatta");
+		Properties prop= dl.LoadDataToSalesPlanning();
+		//SelectDropDown(GNDivisionDD, GNDivisionTextBox,"sedawa");
+		verify.SelectDropDown(GNDivisionDD, GNDivisionTextBox, prop.getProperty("enterGNDivision"), prop.getProperty("ExpectedGNDivision"));
+//		String s=GNDivisionDD.getText();
+//		System.out.println("text gndivisions value is "+s);
+//		assertEquals(s, "Sedawatta");
 	}
 	
 	
@@ -159,53 +179,61 @@ datePiker.sendKeys(Keys.ENTER);
 	}
 	
 	
-	public void SelectStartdate() {
+	public void verifyselectStartdate() throws IOException {
 		// TODO Auto-generated method stub
-Selectdate(startdate);
+		Properties prop= dl.LoadDataToSalesPlanning();
+		verify.Selectdate(startdate,prop.getProperty("Enterstartdate"),prop.getProperty("expectedStartDate"));
+//Selectdate(startdate);
 //String currentdate=startdate.getText();
 //System.out.println("currentdate is"+currentdate);
 //assertEquals(currentdate, "2018-12-13");
 	}
 	
-	public void SelectEnddate() {
+	public void verifySelectEnddate() throws IOException {
 		// TODO Auto-generated method stub
-Selectdate(EndDate);
+		Properties prop= dl.LoadDataToSalesPlanning();
+		verify.Selectdate(EndDate,prop.getProperty("EnterEndDate"),prop.getProperty("expectedEndDate"));
 	}
+	
 	
 	public void ClickonToweCheckBox() {
 		// TODO Auto-generated method stub
-		
-		getTowerCheckBox().click();
-		assertTrue(Towerimage.isEnabled());		
-	}
+		verify.ClickonCheckBox(TowerCheckbox);
+			}
 	
-	public void VerifyTextMessage() {
+public void verifytoverCheckBoxIsEnablled() {
+	// TODO Auto-generated method stub
+//verify.verifyElementIsEnabled(TowerCheckbox);
+}
+	
+	
+	public void VerifyTextMessage() throws IOException {
 		// TODO Auto-generated method stub
 		JavascriptExecutor js=(JavascriptExecutor) d;
 		js.executeScript("window.scrollBy(0,300)");
 		SubmitButton.click();
+		Properties prop=dl.LoadDataToSalesPlanning();
 		//assertTrue(msgbox.isEnabled());	
-		String s=msgboxtext.getText();
-		System.out.println("messsage text is"+s);
-		assertTrue(s.contains("Are you sure you need to assign this task to"));
+		verify.VerifyTextgloble(msgboxtext, prop.getProperty("messagetext"));
+	
 	}
 	
 	public void ClickOnCancleButton() {
 		// TODO Auto-generated method stub
-		try {
-			Thread.sleep(200);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			Thread.sleep(200);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		MessageBoxcanclebutton.click();
-		try {
-			Thread.sleep(200);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		//msgbox.isEnabled();
+//		try {
+//			Thread.sleep(200);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		//msgbox.isEnabled();
 		assertFalse(msgbox.isEnabled());
 	}
 	
@@ -231,11 +259,12 @@ Selectdate(EndDate);
 		
 	}
 
-	public WebElement getTowerCheckBox() {
-		return TowerCheckBox;
-	}
+//	public WebElement getTowerCheckBox() {
+//		return TowerCheckBox;
+//	}
 
 	public void setTowerCheckBox(WebElement towerCheckBox) {
 		TowerCheckBox = towerCheckBox;
 	}
+
 }

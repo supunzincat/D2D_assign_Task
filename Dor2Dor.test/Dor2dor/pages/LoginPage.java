@@ -19,7 +19,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import driverlaunch.DataLoader;
+import Config.DataLoader;
 
 public class LoginPage {
 	WebDriver driver;

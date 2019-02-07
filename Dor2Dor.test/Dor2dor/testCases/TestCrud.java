@@ -7,11 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.SendKeysAction;
 import org.testng.annotations.Test;
 
-import driverlaunch.LaunchWebDriver;
+import Config.LaunchWebDriver;
 import pages.CRUD;
 import pages.DshboardPage;
 import pages.LoginPage;
-import pages.MyTaskPage;
+import pages.AssignedTaskedPage;
 
 public class TestCrud 
 {WebDriver driver = LaunchWebDriver.WebdriverLaunch();

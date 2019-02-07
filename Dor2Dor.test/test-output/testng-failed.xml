@@ -3,11 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TC_TerritorryManagerTasks">
+      <class name="testCases.TS_001_Sales_Planning">
         <methods>
-          <include name="TC_008_verif_OnlyExpiredTsks_Text"/>
+          <include name="TC_015_select_Terriotorry"/>
+          <include name="Tc_021_verify_Cancle_Submission"/>
+          <include name="Tc_022_verify_SubmitSuccessFully"/>
+          <include name="Tc_19_verify_Click_tower_Check_Box"/>
         </methods>
-      </class> <!-- testCases.TC_TerritorryManagerTasks -->
+      </class> <!-- testCases.TS_001_Sales_Planning -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
