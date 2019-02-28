@@ -84,7 +84,7 @@ datePiker.clear();
 datePiker.click();
 //datePiker.sendKeys(Keys.ARROW_RIGHT);
 datePiker.sendKeys("2018-11-01");
-
+//test
 //datePiker.sendKeys(Keys.ENTER);
 	}
 	

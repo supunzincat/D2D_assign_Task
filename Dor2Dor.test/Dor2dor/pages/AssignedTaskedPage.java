@@ -136,7 +136,7 @@ Datevalue.sendKeys(Date);
 	public void verifyEndDate() throws IOException {
 		// TODO Auto-generated method stub
 		Properties prop= dl.LoadDataToAssignTasks();
-		slectDate(EndDate, prop.getProperty("EnterEndDate"));
+		//slectDate(EndDate, prop.getProperty("EnterEndDate"));
 		verify.Selectdate(EndDate, prop.getProperty("VerifyEndDate"), prop.getProperty("VerifyEndDate"));
 		
 	}
