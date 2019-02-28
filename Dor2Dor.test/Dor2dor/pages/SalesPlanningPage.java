@@ -6,6 +6,9 @@ import static org.testng.Assert.assertTrue;
 
 import java.awt.RenderingHints.Key;
 import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -18,7 +21,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import Config.DataLoader;
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+import config.DataLoader;
 import proxy.verifications;
 
 public class SalesPlanningPage {
@@ -149,13 +155,13 @@ VeriFyDropDownIsEnabled(TowersDropDown);
 	public void verifySelectedDistrict() throws IOException {
 		// TODO Auto-generated method stu
 		Properties prop=dl.LoadDataToSalesPlanning();
-		verify.SelectDropDown(DistrictDropDown, DistrictDDTextbox,prop.getProperty("selectColombo"),prop.getProperty("ExpectingColombo"));
+		verify.verifyGlobalSelectDropDown(DistrictDropDown, DistrictDDTextbox,prop.getProperty("selectColombo"),prop.getProperty("ExpectingColombo"));
 	}
 	
 	public void verifySelectedTerriotarry() throws IOException {
 		// TODO Auto-generated method stub  enterTerritory 
 		Properties prop=dl.LoadDataToSalesPlanning();
-		verify.SelectDropDown(TerritoryDropDown, TerriotorryTextBox, prop.getProperty("enterTerritory"),prop.getProperty("ExpectedTerritorry"));
+		verify.verifyGlobalSelectDropDown(TerritoryDropDown, TerriotorryTextBox, prop.getProperty("enterTerritory"),prop.getProperty("ExpectedTerritorry"));
 
 	}
 	
@@ -163,7 +169,7 @@ VeriFyDropDownIsEnabled(TowersDropDown);
 		// TODO Auto-generated method stub
 		Properties prop= dl.LoadDataToSalesPlanning();
 		//SelectDropDown(GNDivisionDD, GNDivisionTextBox,"sedawa");
-		verify.SelectDropDown(GNDivisionDD, GNDivisionTextBox, prop.getProperty("enterGNDivision"), prop.getProperty("ExpectedGNDivision"));
+		verify.verifyGlobalSelectDropDown(GNDivisionDD, GNDivisionTextBox, prop.getProperty("enterGNDivision"), prop.getProperty("ExpectedGNDivision"));
 //		String s=GNDivisionDD.getText();
 //		System.out.println("text gndivisions value is "+s);
 //		assertEquals(s, "Sedawatta");
@@ -187,6 +193,20 @@ datePiker.sendKeys(Keys.ENTER);
 //String currentdate=startdate.getText();
 //System.out.println("currentdate is"+currentdate);
 //assertEquals(currentdate, "2018-12-13");
+	}
+	
+	
+	public void dbconnection() throws SQLException, ClassNotFoundException {
+		// TODO Auto-generated method stub
+		//forName(“com.mysql.jdbc.Driver”);
+		//String dbUrl = "jdbc:mysql://localhost:3036/emp";
+		Class.forName("com.mysql.jdbc.Driver");
+		java.sql.Connection con=	DriverManager.getConnection("jdbc:MySQL://172.26.28.127:3306/wom_devel", "womuser", "Womuser@123");
+		//java.sql.Connection con=	DriverManager.getConnection("jdbc:MySQL://127.0.0.1/wom_devel", "womuser", "Womuser@123");
+		java.sql.Statement stmt = con.createStatement();	
+	ResultSet rs=	stmt.executeQuery("SELECT * FROM `d2d_tasks_to_bb_towers` WHERE TASK_ID=15");
+	System.out.println(rs);
+
 	}
 	
 	public void verifySelectEnddate() throws IOException {

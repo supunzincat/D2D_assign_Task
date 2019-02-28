@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import Config.LaunchWebDriver;
+import config.LaunchWebDriver;
 import pages.DshboardPage;
 import pages.LoginPage;
 import pages.TerritorryManagerTasks;
@@ -15,7 +15,7 @@ public class TS_003_TerritorryManagerTasks {
 	WebDriver driver= LaunchWebDriver.WebdriverLaunch();
 
 	@Test(priority=1)
-	public void TC001_Verify_Navigate_TO_Territorry_Manager_Task() throws IOException {
+	public void TC_001_Verify_Navigate_TO_Territorry_Manager_Task() throws IOException {
 		//this will click on territorry manager link and navigate to territory manger Task
 		LoginPage log= new LoginPage(driver);
 		log.LoginToWom();

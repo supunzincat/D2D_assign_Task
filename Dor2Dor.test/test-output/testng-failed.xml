@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TS_001_Sales_Planning">
+      <class name="testCases.TS_002_AssignedTasks">
         <methods>
-          <include name="TC_015_select_Terriotorry"/>
-          <include name="Tc_021_verify_Cancle_Submission"/>
-          <include name="Tc_022_verify_SubmitSuccessFully"/>
-          <include name="Tc_19_verify_Click_tower_Check_Box"/>
+          <include name="TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown"/>
+          <include name="TC_016Verify_Grid_View"/>
+          <include name="TC_015_Verify_Table_View"/>
+          <include name="TC_010_Verify_select_District"/>
+          <include name="TC_011_vrify_select_Territorry"/>
         </methods>
-      </class> <!-- testCases.TS_001_Sales_Planning -->
+      </class> <!-- testCases.TS_002_AssignedTasks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

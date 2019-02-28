@@ -3,6 +3,9 @@ package pages;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -12,7 +15,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.PageFactoryFinder;
 
-import Config.DataLoader;
+import config.DataLoader;
+import config.Dbconnection;
 import proxy.verifications;
 
 
@@ -161,4 +165,27 @@ navigatetosubmenu(TerritorryManagerTasks, TerritorryManagerTasksUrl);
 		VerifyText.VerifyTextgloble(RemarksLableLocatorr, prop.getProperty("RemarksLable"));
 	}
 	
+	
+	
+public void loaddatabase(String EnterTableColumnName,String EnterQuery) throws ClassNotFoundException, SQLException {
+	Dbconnection Database= new Dbconnection();
+	ResultSet rs=Database.loadDatafromDB(EnterQuery);
+	String value = null;
+	while(rs.next()) 
+{
+	 value=rs.getString(EnterTableColumnName);
+	//System.out.println(">>>>>>>>>>Name of value is>>??<<>> "+value);
+}
+
+System.out.println(">>>>>>>>>>Name of value is>>??<<>> "+value);
+assertEquals("15", value);
+}
+	
+	public void verifywithdb() throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		//"SELECT * FROM `d2d_tasks_to_bb_towers` WHERE TASK_ID=15"
+loaddatabase("SUB_TASK_ID", "SELECT * FROM `d2d_sub_task_to_agent_users`");
+	}
+
+
 }

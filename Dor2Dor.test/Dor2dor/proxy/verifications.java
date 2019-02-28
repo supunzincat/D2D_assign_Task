@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.mustache.Value;
 
-import Config.DataLoader;
+import config.DataLoader;
 import pages.SalesPlanningPage.Status;
 
 public class verifications {
@@ -26,6 +26,7 @@ public class verifications {
 		//System.out.println(valueoftext);
 	}
 	
+	
 	public void setwait(int EnterWaittime) {
 		// TODO Auto-generated method stub
 		try {
@@ -36,7 +37,8 @@ public class verifications {
 		}
 	}
 	
-	public void SelectDropDown(WebElement DropdownName,WebElement Dropdowntexboxvalue,String TextValueForEnterToTextBox,String SelectedValueExpected) {
+	
+	public void verifyGlobalSelectDropDown(WebElement DropdownName,WebElement Dropdowntexboxvalue,String TextValueForEnterToTextBox,String SelectedValueExpected) {
 		// TODO Auto-generated method stub
 		setwait(500);
 		int itaration=20;
@@ -67,22 +69,22 @@ public class verifications {
 	}
 	
 	
-	
-	public void Selectdate(WebElement datePiker,String datevalue,String expectedValue) {
+	public void Selectdate(WebElement enterDatePiker,String enterDatevalueThatYouNeedToSelect,String enterExpectedValue) {
 		// TODO Auto-generated method stub
-datePiker.click();
-datePiker.clear();
-datePiker.sendKeys(datevalue);
+enterDatePiker.click();
+enterDatePiker.clear();
+enterDatePiker.sendKeys(enterDatevalueThatYouNeedToSelect);
 //datePiker.sendKeys(Keys.ARROW_RIGHT);
-datePiker.sendKeys(Keys.ENTER);
-String valueofdatepiker=datePiker.getAttribute("value");
-assertEquals(valueofdatepiker, expectedValue);
+enterDatePiker.sendKeys(Keys.ENTER);
+String valueofdatepiker=enterDatePiker.getAttribute("value");
+assertEquals(valueofdatepiker, enterExpectedValue);
 	}
 	
-	public void ClickonCheckBox(WebElement checkbox) {
+	
+	public void ClickonCheckBox(WebElement enterCheckbox) {
 		// TODO Auto-generated method stub
 		//
-		checkbox.click();
+		enterCheckbox.click();
 		assertFalse(true);
 //		checkbox.isSelected();
 //		checkbox.isDisplayed();

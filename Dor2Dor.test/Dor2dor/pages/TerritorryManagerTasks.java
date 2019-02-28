@@ -13,7 +13,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import Config.DataLoader;
+import config.DataLoader;
 import proxy.verifications;
 
 public class TerritorryManagerTasks {

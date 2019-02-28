@@ -5,12 +5,12 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import Config.LaunchWebDriver;
+import config.LaunchWebDriver;
 import pages.DshboardPage;
 import pages.LoginPage;
 import pages.Page_SubtaskListView;
 
-public class TC_AgentTaskView {
+public class TS005__AgentTaskView {
 WebDriver driver= LaunchWebDriver.WebdriverLaunch();
 
 @Test(priority=1)

@@ -11,8 +11,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class Page_SubtaskListView {
+import proxy.verifications;
 
+public class Page_SubtaskListView {
+verifications verify= new verifications();
+
+	
 	WebDriver driver;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[1]/div/div/div/div/button/span[1]")WebElement Districtvalue;
@@ -96,6 +100,7 @@ datePiker.sendKeys(Keys.ENTER);
 	
 	public void selectalldates() {
 		// TODO Auto-generated method stub
+		//verify.Selectdate(StartDate, enterDatevalueThatYouNeedToSelect, enterExpectedValue);
 		SelectStartdate(StartDate);
 		SelectEnddate(EndDate);
 	}

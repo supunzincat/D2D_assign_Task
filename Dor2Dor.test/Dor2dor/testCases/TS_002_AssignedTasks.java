@@ -5,21 +5,22 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import Config.LaunchWebDriver;
+//import Config.LaunchWebDriver;
 import pages.DshboardPage;
 import pages.LoginPage;
 import pages.AssignedTaskedPage;
 
 public class TS_002_AssignedTasks {
-
-	WebDriver d= LaunchWebDriver.WebdriverLaunch();
+WebDriver d= config.LaunchWebDriver.WebdriverLaunch();
+	
 	AssignedTaskedPage mytask= new AssignedTaskedPage(d);
+	
 	@Test(priority=1)
 	public void TC_001_Verify_navigate_To_wom() throws IOException {
 		// TODO Auto-generated method stubLoginPage Login= new LoginPage(d);
 		LoginPage Login= new LoginPage(d);
 		Login.LoginToWom();	
-}
+		}
 	
 	@Test(priority=2)
 	public void TC_002_Verify_Navigate_TO_MyTask() {
@@ -78,39 +79,39 @@ public class TS_002_AssignedTasks {
 	
 	
 	@Test(priority=8)
-	public void TC_003_Verify_select_StartDate() throws IOException {
+	public void TC_008_Verify_select_StartDate() throws IOException {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
-		mytask.selectStartDate();
-		mytask.verifyStartDate();
+		mytask.VerifyStartDate();
+		
 	}
 	
 	@Test(priority=9)
-	public void TC_004_Verify_select_endDate() throws IOException {
+	public void TC_009_Verify_select_endDate() throws IOException {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
-		mytask.EnterEndDate();
 		mytask.verifyEndDate();
+		//mytask.verifyEndDate();
 		
 	}
 	
 	@Test(priority=10)
-	public void TC_005_Verify_select_District() throws IOException {
+	public void TC_010_Verify_select_District() throws IOException {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
-		mytask.SelectDistrict();
-		mytask.verifyDistrictValue();
+		mytask.verifySelectDistrict();
+	//	mytask.verifyDistrictValue();
 	}
 	
 	@Test(priority=11)
-	public void TC_006_vrify_select_Territorry() throws InterruptedException, IOException {
+	public void TC_011_vrify_select_Territorry() throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
 		mytask.SelectTerritorry();
 		mytask.VerifyTerritorryValue();
 	}
 	@Test(priority=12)
-	public void TC_007_Verify_select_Status() throws IOException {
+	public void TC_012_Verify_select_Status() throws IOException {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
 		mytask.SelectStaus();
@@ -118,7 +119,7 @@ mytask.VerifyStatusyValue();
 	}
 	
 	@Test(priority=13)
-	public void TC_008_Verify_click_sublit() {
+	public void TC_013_Verify_click_sublit() {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
 mytask.verifySelctButton();
@@ -126,26 +127,26 @@ mytask.verifySelctButton();
 	
 	
 	@Test(priority=14)
-	public void TC_009_Verify_Multiselect_Functionlity_OF_District_Dropdown() throws IOException {
+	public void TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown() throws IOException {
 		// TODO Auto-generated method stub
 mytask.multiselectrDistrict();
 	}
-	@Test(priority=14)
-	public void TC_009_Verify_Table_View() {
+	@Test(priority=15)
+	public void TC_015_Verify_Table_View() {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
 mytask.IsTableviewEnabled();
 	}
 	
-	@Test(priority=15)
-	public void TC_010Verify_Grid_View() {
+	@Test(priority=16)
+	public void TC_016Verify_Grid_View() {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
 mytask.IsGridviewEnabled();
 	}
 	
-	@Test(priority=16)
-	public void TC_01Quit() {
+	@Test(priority=17)
+	public void TC_017_uit() {
 		// TODO Auto-generated method stub
 //d.quit();
 	}

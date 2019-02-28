@@ -14,7 +14,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import Config.DataLoader;
+import config.DataLoader;
 import proxy.verifications;
 
 public class AssignedTaskedPage {
@@ -125,24 +125,27 @@ Datevalue.sendKeys(Date);
 	}
 	
 	
-	public void selectStartDate() throws IOException {
+	
+	
+	public void VerifyStartDate() throws IOException {
 		// TODO Auto-generated method stub
 		Properties prop = dl.LoadDataToAssignTasks();
-		slectDate(StartDate, prop.getProperty("EnterStartDate"));
-		
+		verify.Selectdate(StartDate, prop.getProperty("VerifyStartdte"), prop.getProperty("VerifyStartdte"));
 	}
 	
-	public void EnterEndDate() throws IOException {
+	public void verifyEndDate() throws IOException {
 		// TODO Auto-generated method stub
 		Properties prop= dl.LoadDataToAssignTasks();
 		slectDate(EndDate, prop.getProperty("EnterEndDate"));
+		verify.Selectdate(EndDate, prop.getProperty("VerifyEndDate"), prop.getProperty("VerifyEndDate"));
 		
 	}
 	
-	public void SelectDistrict() throws IOException {
+	public void verifySelectDistrict() throws IOException {
 		// TODO Auto-generated method stub
 		Properties prop= dl.LoadDataToAssignTasks();
-SelectDDValues(DistrictLocator, DistrictTextBoxt, prop.getProperty("EnterDistrictValue"));
+		verify.verifyGlobalSelectDropDown(DistrictLocator, DistrictTextBoxt,prop.getProperty("DistrictFirstValue") , prop.getProperty("VerifyDistrictValue"));
+//SelectDDValues(DistrictLocator, DistrictTextBoxt, prop.getProperty("EnterDistrictValue"));
 
 	}
 	
@@ -192,12 +195,12 @@ getselectedvalue(TeriitorryLocator,"title",prop.getProperty("COL - Colombo Depot
 		prop.getProperty("VerifyStartdte"));
 	}
 	
-	public void verifyEndDate() throws IOException {
-		
-		// TODO Auto-generated method stub
-		Properties prop= dl.LoadDataToAssignTasks();
-getselectedvalue(EndDate, "value",prop.getProperty("VerifyEndDate"));
-	}
+//	public void verifyEndDate() throws IOException {
+//		
+//		// TODO Auto-generated method stub
+//		Properties prop= dl.LoadDataToAssignTasks();
+//getselectedvalue(EndDate, "value",prop.getProperty("VerifyEndDate"));
+//	}
 	
 	public void verifySelctButton() {
 		// TODO Auto-generated method stub

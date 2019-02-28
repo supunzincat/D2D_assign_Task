@@ -3,13 +3,14 @@ package testCases;
 import static org.testng.Assert.assertTrue;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import Config.LaunchWebDriver;
+import config.LaunchWebDriver;
 import pages.DshboardPage;
 import pages.LoginPage;
 import pages.SalesPlanningPage;
@@ -26,23 +27,27 @@ public class TS_001_Sales_Planning {
 		// TODO Auto-generated method stub
 		LoginPage Login= new LoginPage(d);
 		Login.LoginToWom();
+		
 	}
 
 	
 	@Test(priority=2)
-		public void TC_002_Verify_navigateTo_SalesPlanning() {
-		// TODO Auto-generated method stub
+		public void TC_002_Verify_navigateTo_SalesPlanning() throws ClassNotFoundException, SQLException {
+		//// TODO Auto-generated method stub
 		DshboardPage dashbord= new DshboardPage(d);
 		dashbord.NavigateToSalesPlanning();
-		//d.findElement(By.xpath("//select[@id='depot']")).isEnabled();
+//		d.findElement(By.xpath("//select[@id='depot']")).isEnabled();
+		dashbord.verifywithdb();
+		dashbord.verifywithdb();
 }
 	
 	
 	
 	@Test(priority=3)
-public void TC_003_Verify_District_Lable() throws IOException {
+public void TC_003_Verify_District_Lable() throws IOException, ClassNotFoundException, SQLException {
 	// TODO Auto-generated method stub
 		dashbord.verifyDistrictLable();
+		taskAssign.dbconnection();
 		}
 		
 	@Test(priority=4)
@@ -83,7 +88,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	
 	
 	@Test(priority=10)
-	public void TC010_VerifyIs_District_DropdownEnabled() {
+	public void TC_010_VerifyIs_District_DropdownEnabled() {
 		// TODO Auto-generated method stub
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		taskAssign.VerifyIsDistrictDropdownEnabled();
@@ -91,7 +96,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	}
 		
 	@Test(priority=11)
-	public void TC011_VerifyIs_Territory_DropdownEnabled() {
+	public void TC_011_VerifyIs_Territory_DropdownEnabled() {
 		// TODO Auto-generated method stub
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		taskAssign.VerifyIsTerritoryDropdownEnabled();
@@ -99,7 +104,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	
 	
 	@Test(priority=12)
-	public void TC012_VerifyIs_GNDivisions_DropdownEnabled() {
+	public void TC_012_VerifyIs_GNDivisions_DropdownEnabled() {
 		// TODO Auto-generated method stub
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		taskAssign.VerifyIsGNDivisionsDropdownEnabled();
@@ -107,7 +112,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	
 	
 	@Test(priority=13)
-	public void TC013_VerifyIs_Towers_DropdownEnabled() {
+	public void TC_013_VerifyIs_Towers_DropdownEnabled() {
 		// TODO Auto-generated method stub
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		//taskAssign.VerifyIsTowersDropdownEnabled();
@@ -116,7 +121,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 
 	
 	@Test(priority=14)
-	public void TC014_select_districtValue() throws IOException {
+	public void TC_014_select_districtValue() throws IOException {
 		// TODO Auto-generated method stub
 		//SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		taskAssign.verifySelectedDistrict();
@@ -139,7 +144,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	
 	
 	@Test(priority=17)
-	public void Tc_017_verify_select_StarttDate() throws IOException {
+	public void TC_017_verify_select_StarttDate() throws IOException {
 		// TODO Auto-generated method stub
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		taskAssign.verifyselectStartdate();
@@ -147,7 +152,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	
 	
 	@Test(priority=18)
-	public void Tc_0181_verify_select_EndDate() throws IOException {
+	public void TC_0181_verify_select_EndDate() throws IOException {
 		// TODO Auto-generated method stub
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		taskAssign.verifySelectEnddate();
@@ -155,7 +160,7 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	
 	
 	@Test(priority=19)
-	public void Tc_19_verify_Click_tower_Check_Box() {
+	public void TC_019_verify_Click_tower_Check_Box() {
 		// TODO Auto-generated method stub
 	//	SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 
@@ -167,14 +172,14 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	}
 	
 	@Test(priority=20)
-	public void Tc_020_verify_Confirm_message() throws IOException {
+	public void TC_020_verify_Confirm_message() throws IOException {
 		// TODO Auto-generated method stub
 		taskAssign.VerifyTextMessage();
 		
 	}
 	
 	@Test(priority=21)
-	public void Tc_021_verify_Cancle_Submission() {
+	public void TC_021_verify_Cancle_Submission() {
 		// TODO Auto-generated method stub
 	//	SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		try {
@@ -191,10 +196,10 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 	
 	
 	@Test(priority=22)
-	public void Tc_022_verify_SubmitSuccessFully() {
+	public void TC_022_verify_SubmitSuccessFully() {
 		// TODO Auto-generated method stub
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
-		taskAssign.MessageBoxcSubmitbutton();
+		//taskAssign.MessageBoxcSubmitbutton();
 		
 	}
 	

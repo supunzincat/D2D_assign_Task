@@ -7,13 +7,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.SendKeysAction;
 import org.testng.annotations.Test;
 
-import Config.LaunchWebDriver;
+import config.LaunchWebDriver;
 import pages.CRUD;
 import pages.DshboardPage;
 import pages.LoginPage;
 import pages.AssignedTaskedPage;
 
-public class TestCrud 
+public class TS_004_TM_Territory_Allocation 
 {WebDriver driver = LaunchWebDriver.WebdriverLaunch();
 
 @Test(priority=1)
@@ -24,7 +24,7 @@ public void TC_001_verify_User_Able_TO_Navigate_Dashboard() throws IOException {
 }
 
 @Test(priority=2)
-public void TC002_Verify_Navigate_To_Crud() {
+public void TC_002_Verify_Navigate_To_Crud() {
 	// TODO Auto-generated method stub
 	DshboardPage dashbord= new DshboardPage(driver);
 	dashbord.ClickOnDortoDor();

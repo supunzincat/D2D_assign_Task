@@ -17,5 +17,6 @@
 	<classpathentry kind="lib" path="D:/configSelenium/Selenium3.14/libs/okio-1.14.1.jar"/>
 	<classpathentry kind="lib" path="D:/configSelenium/dom4j-1.6.jar/dom4j-1.6.jar"/>
 	<classpathentry kind="lib" path="D:/configSelenium/jaxen-1.1.1.jar/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/selenium/config/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
