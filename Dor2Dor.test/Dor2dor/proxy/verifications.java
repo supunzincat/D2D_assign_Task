@@ -55,6 +55,7 @@ public class verifications {
 		//DropdownName.click();		
 		//Dropdowntexboxvalue.sendKeys(TextValueForEnterToTextBox);
 		for (int i = 0; i < itaration; i++) {
+			Dropdowntexboxvalue.clear();
 			Dropdowntexboxvalue.sendKeys(TextValueForEnterToTextBox);
 			break;
 		}
@@ -67,6 +68,13 @@ public class verifications {
 		assertEquals(s, SelectedValueExpected);
 	
 	}
+	
+	
+	
+	
+	
+
+	
 	
 	
 	public void Selectdate(WebElement enterDatePiker,String enterDatevalueThatYouNeedToSelect,String enterExpectedValue) {

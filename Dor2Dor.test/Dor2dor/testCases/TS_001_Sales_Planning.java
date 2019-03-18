@@ -37,8 +37,8 @@ public class TS_001_Sales_Planning {
 		DshboardPage dashbord= new DshboardPage(d);
 		dashbord.NavigateToSalesPlanning();
 //		d.findElement(By.xpath("//select[@id='depot']")).isEnabled();
-		dashbord.verifywithdb();
-		dashbord.verifywithdb();
+		//taskAssign.getlistvalues();
+	//	dashbord.verifywithdb();
 }
 	
 	
@@ -119,6 +119,9 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 		taskAssign.verifytowerDDStatus(Status.disble);
 	}
 
+	
+	
+	
 	
 	@Test(priority=14)
 	public void TC_014_select_districtValue() throws IOException {
@@ -202,6 +205,14 @@ public void TC_005_Verify_GnDivision_Lable() throws IOException {
 		//taskAssign.MessageBoxcSubmitbutton();
 		
 	}
+	
+	@Test(priority=14)
+	public void TC_014_districtValue() throws IOException {
+		// TODO Auto-generated method stub
+		//SalesPlanningPage taskAssign= new SalesPlanningPage(d);
+		taskAssign.verifyDistrictDropdownValues();
+	}
+	
 	
 //	@Test(priority=11)
 //	public void SELECTEDIS() {

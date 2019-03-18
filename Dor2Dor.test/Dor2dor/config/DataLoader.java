@@ -50,4 +50,13 @@ public class DataLoader {
 		pro.load(ip);
 		return pro;		
 	}
+	
+	public Properties LoadDataToAgenTask() throws IOException {
+		// TODO Auto-generated method stub
+Properties prop= new Properties();
+FileInputStream ip=new FileInputStream("C:\\Users\\supun_zincat\\git\\D2D_assign_Task\\Dor2Dor.test\\Dor2dor\\dataprovider\\AgentTask.properties");
+prop.load(ip);
+return prop;		
+
+	}
 }

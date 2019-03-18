@@ -1,65 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="5" total="17" passed="12">
+<testng-results skipped="0" failed="4" total="24" passed="20">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="90396" started-at="2019-02-27T09:02:35Z" finished-at="2019-02-27T09:04:06Z">
+  <suite name="Default suite" duration-ms="19626" started-at="2019-03-14T11:22:26Z" finished-at="2019-03-14T11:22:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="90396" started-at="2019-02-27T09:02:35Z" finished-at="2019-02-27T09:04:06Z">
-      <class name="testCases.TS_002_AssignedTasks">
-        <test-method status="PASS" signature="TC_001_Verify_navigate_To_wom()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_001_Verify_navigate_To_wom" duration-ms="5854" started-at="2019-02-27T14:32:35Z" finished-at="2019-02-27T14:32:41Z">
+    <test name="Default test" duration-ms="19626" started-at="2019-03-14T11:22:26Z" finished-at="2019-03-14T11:22:46Z">
+      <class name="testCases.TS_001_Sales_Planning">
+        <test-method status="PASS" signature="TC_001_verify_User_Able_TO_Navigate_Dashboard()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_001_verify_User_Able_TO_Navigate_Dashboard" duration-ms="5671" started-at="2019-03-14T16:52:26Z" finished-at="2019-03-14T16:52:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_001_Verify_navigate_To_wom -->
-        <test-method status="PASS" signature="TC_002_Verify_Navigate_TO_MyTask()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_002_Verify_Navigate_TO_MyTask" duration-ms="5804" started-at="2019-02-27T14:32:41Z" finished-at="2019-02-27T14:32:47Z">
+        </test-method> <!-- TC_001_verify_User_Able_TO_Navigate_Dashboard -->
+        <test-method status="PASS" signature="TC_002_Verify_navigateTo_SalesPlanning()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_002_Verify_navigateTo_SalesPlanning" duration-ms="5564" started-at="2019-03-14T16:52:32Z" finished-at="2019-03-14T16:52:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_002_Verify_Navigate_TO_MyTask -->
-        <test-method status="PASS" signature="TC_003_verify_SartFrom_Lable()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_003_verify_SartFrom_Lable" duration-ms="53" started-at="2019-02-27T14:32:47Z" finished-at="2019-02-27T14:32:47Z">
+        </test-method> <!-- TC_002_Verify_navigateTo_SalesPlanning -->
+        <test-method status="PASS" signature="TC_003_Verify_District_Lable()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_003_Verify_District_Lable" duration-ms="803" started-at="2019-03-14T16:52:37Z" finished-at="2019-03-14T16:52:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_003_verify_SartFrom_Lable -->
-        <test-method status="PASS" signature="TC_004_verify_EndDate_Lable()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_004_verify_EndDate_Lable" duration-ms="45" started-at="2019-02-27T14:32:47Z" finished-at="2019-02-27T14:32:47Z">
+        </test-method> <!-- TC_003_Verify_District_Lable -->
+        <test-method status="PASS" signature="TC_004_Verify_TerriTory_Lable()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_004_Verify_TerriTory_Lable" duration-ms="49" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_004_verify_EndDate_Lable -->
-        <test-method status="PASS" signature="TC_005_verify_District_Lable()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_005_verify_District_Lable" duration-ms="45" started-at="2019-02-27T14:32:47Z" finished-at="2019-02-27T14:32:47Z">
+        </test-method> <!-- TC_004_Verify_TerriTory_Lable -->
+        <test-method status="PASS" signature="TC_005_Verify_GnDivision_Lable()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_005_Verify_GnDivision_Lable" duration-ms="55" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_005_verify_District_Lable -->
-        <test-method status="PASS" signature="TC_006_verify_Territory_Lable()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_006_verify_Territory_Lable" duration-ms="50" started-at="2019-02-27T14:32:47Z" finished-at="2019-02-27T14:32:47Z">
+        </test-method> <!-- TC_005_Verify_GnDivision_Lable -->
+        <test-method status="PASS" signature="TC_006_Verify_StartDate_Lable()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_006_Verify_StartDate_Lable" duration-ms="63" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_006_verify_Territory_Lable -->
-        <test-method status="PASS" signature="TC_007_verify_Status_Lable()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_007_verify_Status_Lable" duration-ms="43" started-at="2019-02-27T14:32:47Z" finished-at="2019-02-27T14:32:47Z">
+        </test-method> <!-- TC_006_Verify_StartDate_Lable -->
+        <test-method status="PASS" signature="TC_007_Verify_EndDate_Lable()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_007_Verify_EndDate_Lable" duration-ms="47" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_007_verify_Status_Lable -->
-        <test-method status="PASS" signature="TC_008_Verify_select_StartDate()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_008_Verify_select_StartDate" duration-ms="506" started-at="2019-02-27T14:32:47Z" finished-at="2019-02-27T14:32:48Z">
+        </test-method> <!-- TC_007_Verify_EndDate_Lable -->
+        <test-method status="PASS" signature="TC_008_Verify_Tower_Lable()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_008_Verify_Tower_Lable" duration-ms="46" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_008_Verify_select_StartDate -->
-        <test-method status="PASS" signature="TC_009_Verify_select_endDate()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_009_Verify_select_endDate" duration-ms="41544" started-at="2019-02-27T14:32:48Z" finished-at="2019-02-27T14:33:29Z">
+        </test-method> <!-- TC_008_Verify_Tower_Lable -->
+        <test-method status="PASS" signature="TC_009_Verify_Remarks_Lable()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_009_Verify_Remarks_Lable" duration-ms="47" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_009_Verify_select_endDate -->
-        <test-method status="FAIL" signature="TC_010_Verify_select_District()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_010_Verify_select_District" duration-ms="34443" started-at="2019-02-27T14:33:29Z" finished-at="2019-02-27T14:34:04Z">
+        </test-method> <!-- TC_009_Verify_Remarks_Lable -->
+        <test-method status="PASS" signature="TC_010_VerifyIs_District_DropdownEnabled()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_010_VerifyIs_District_DropdownEnabled" duration-ms="53" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_010_VerifyIs_District_DropdownEnabled -->
+        <test-method status="PASS" signature="TC_011_VerifyIs_Territory_DropdownEnabled()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_011_VerifyIs_Territory_DropdownEnabled" duration-ms="47" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_011_VerifyIs_Territory_DropdownEnabled -->
+        <test-method status="PASS" signature="TC_012_VerifyIs_GNDivisions_DropdownEnabled()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_012_VerifyIs_GNDivisions_DropdownEnabled" duration-ms="63" started-at="2019-03-14T16:52:38Z" finished-at="2019-03-14T16:52:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_012_VerifyIs_GNDivisions_DropdownEnabled -->
+        <test-method status="PASS" signature="TC_013_VerifyIs_Towers_DropdownEnabled()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_013_VerifyIs_Towers_DropdownEnabled" duration-ms="71" started-at="2019-03-14T16:52:39Z" finished-at="2019-03-14T16:52:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_013_VerifyIs_Towers_DropdownEnabled -->
+        <test-method status="FAIL" signature="TC_014_districtValue()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_014_districtValue" duration-ms="0" started-at="2019-03-14T16:52:39Z" finished-at="2019-03-14T16:52:39Z">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unresolved compilation problem: 
+	Syntax error on token "for", delete this token
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "for", delete this token
+
+	at pages.SalesPlanningPage.verifyDistrictDropdownValues(SalesPlanningPage.java:164)
+	at testCases.TS_001_Sales_Planning.TC_014_districtValue(TS_001_Sales_Planning.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014_districtValue -->
+        <test-method status="PASS" signature="TC_014_select_districtValue()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_014_select_districtValue" duration-ms="1058" started-at="2019-03-14T16:52:39Z" finished-at="2019-03-14T16:52:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_014_select_districtValue -->
+        <test-method status="FAIL" signature="TC_015_select_Terriotorry()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_015_select_Terriotorry" duration-ms="873" started-at="2019-03-14T16:52:40Z" finished-at="2019-03-14T16:52:41Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Colombo] but found [Colombo
+              <![CDATA[expected [COL - Colombo Depot] but found [COL - Colombo Depot
  ]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Colombo] but found [Colombo
+              <![CDATA[java.lang.AssertionError: expected [COL - Colombo Depot] but found [COL - Colombo Depot
  ]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:178)
 	at org.testng.Assert.assertEquals(Assert.java:188)
-	at proxy.verifications.verifyGlobalSelectDropDown(verifications.java:65)
-	at pages.AssignedTaskedPage.verifySelectDistrict(AssignedTaskedPage.java:147)
-	at testCases.TS_002_AssignedTasks.TC_010_Verify_select_District(TS_002_AssignedTasks.java:102)
+	at proxy.verifications.verifyGlobalSelectDropDown(verifications.java:68)
+	at pages.SalesPlanningPage.verifySelectedTerriotarry(SalesPlanningPage.java:178)
+	at testCases.TS_001_Sales_Planning.TC_015_select_Terriotorry(TS_001_Sales_Planning.java:138)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -89,22 +152,37 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_010_Verify_select_District -->
-        <test-method status="FAIL" signature="TC_011_vrify_select_Territorry()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_011_vrify_select_Territorry" duration-ms="1044" started-at="2019-02-27T14:34:04Z" finished-at="2019-02-27T14:34:05Z">
+        </test-method> <!-- TC_015_select_Terriotorry -->
+        <test-method status="PASS" signature="TC_016_Verify_select_GN_Division()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_016_Verify_select_GN_Division" duration-ms="1970" started-at="2019-03-14T16:52:41Z" finished-at="2019-03-14T16:52:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_016_Verify_select_GN_Division -->
+        <test-method status="PASS" signature="close()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="close" duration-ms="0" started-at="2019-03-14T16:52:43Z" finished-at="2019-03-14T16:52:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="TC_017_verify_select_StarttDate()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_017_verify_select_StarttDate" duration-ms="515" started-at="2019-03-14T16:52:43Z" finished-at="2019-03-14T16:52:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_017_verify_select_StarttDate -->
+        <test-method status="PASS" signature="TC_0181_verify_select_EndDate()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_0181_verify_select_EndDate" duration-ms="403" started-at="2019-03-14T16:52:43Z" finished-at="2019-03-14T16:52:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_0181_verify_select_EndDate -->
+        <test-method status="FAIL" signature="TC_019_verify_Click_tower_Check_Box()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_019_verify_Click_tower_Check_Box" duration-ms="1042" started-at="2019-03-14T16:52:43Z" finished-at="2019-03-14T16:52:44Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [null] but found [COL - Colombo Depot]]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [null] but found [COL - Colombo Depot]
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at pages.AssignedTaskedPage.getselectedvalue(AssignedTaskedPage.java:167)
-	at pages.AssignedTaskedPage.VerifyTerritorryValue(AssignedTaskedPage.java:182)
-	at testCases.TS_002_AssignedTasks.TC_011_vrify_select_Territorry(TS_002_AssignedTasks.java:111)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at org.testng.Assert.assertFalse(Assert.java:73)
+	at proxy.verifications.ClickonCheckBox(verifications.java:96)
+	at pages.SalesPlanningPage.ClickonToweCheckBox(SalesPlanningPage.java:252)
+	at testCases.TS_001_Sales_Planning.TC_019_verify_Click_tower_Check_Box(TS_001_Sales_Planning.java:171)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -134,105 +212,24 @@
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_011_vrify_select_Territorry -->
-        <test-method status="PASS" signature="TC_012_Verify_select_Status()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_012_Verify_select_Status" duration-ms="302" started-at="2019-02-27T14:34:05Z" finished-at="2019-02-27T14:34:05Z">
+        </test-method> <!-- TC_019_verify_Click_tower_Check_Box -->
+        <test-method status="PASS" signature="TC_020_verify_Confirm_message()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_020_verify_Confirm_message" duration-ms="717" started-at="2019-03-14T16:52:44Z" finished-at="2019-03-14T16:52:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_012_Verify_select_Status -->
-        <test-method status="PASS" signature="TC_013_Verify_click_sublit()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_013_Verify_click_sublit" duration-ms="161" started-at="2019-02-27T14:34:05Z" finished-at="2019-02-27T14:34:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_013_Verify_click_sublit -->
-        <test-method status="FAIL" signature="TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown" duration-ms="191" started-at="2019-02-27T14:34:05Z" finished-at="2019-02-27T14:34:05Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: Element <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" role="button" data-id="territory_id" title="COL - Colombo Depot" aria-expanded="false">...</button> is not clickable at point (573, 227). Other element would receive the click: <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; z-index: 1000; background-color: #000; opacity: 0.2;"></div>
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: '05068-020L', ip: '172.22.101.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\SUPUN_~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64921}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 354a6d5e52c3c9eba70465b13ed28aa6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" role="button" data-id="territory_id" title="COL - Colombo Depot" aria-expanded="false">...</button> is not clickable at point (573, 227). Other element would receive the click: <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; z-index: 1000; background-color: #000; opacity: 0.2;"></div>
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: '05068-020L', ip: '172.22.101.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\SUPUN_~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64921}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 354a6d5e52c3c9eba70465b13ed28aa6
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy7.click(Unknown Source)
-	at pages.AssignedTaskedPage.VerifyMultiSelectFunctionality(AssignedTaskedPage.java:232)
-	at pages.AssignedTaskedPage.multiselectrDistrict(AssignedTaskedPage.java:257)
-	at testCases.TS_002_AssignedTasks.TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown(TS_002_AssignedTasks.java:132)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:773)
-	at org.testng.TestRunner.run(TestRunner.java:623)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
-	at org.testng.TestNG.run(TestNG.java:1018)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown -->
-        <test-method status="FAIL" signature="TC_015_Verify_Table_View()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_015_Verify_Table_View" duration-ms="116" started-at="2019-02-27T14:34:05Z" finished-at="2019-02-27T14:34:05Z">
+        </test-method> <!-- TC_020_verify_Confirm_message -->
+        <test-method status="FAIL" signature="TC_021_verify_Cancle_Submission()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_021_verify_Cancle_Submission" duration-ms="416" started-at="2019-03-14T16:52:45Z" finished-at="2019-03-14T16:52:46Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [table-count-wrap clearfix] but found [submit-form]]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [table-count-wrap clearfix] but found [submit-form]
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at pages.AssignedTaskedPage.IsTableviewEnabled(AssignedTaskedPage.java:226)
-	at testCases.TS_002_AssignedTasks.TC_015_Verify_Table_View(TS_002_AssignedTasks.java:138)
+	at org.testng.Assert.assertFalse(Assert.java:63)
+	at org.testng.Assert.assertFalse(Assert.java:73)
+	at pages.SalesPlanningPage.ClickOnCancleButton(SalesPlanningPage.java:288)
+	at testCases.TS_001_Sales_Planning.TC_021_verify_Cancle_Submission(TS_001_Sales_Planning.java:194)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -262,90 +259,12 @@ Session ID: 354a6d5e52c3c9eba70465b13ed28aa6
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_015_Verify_Table_View -->
-        <test-method status="FAIL" signature="TC_016Verify_Grid_View()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_016Verify_Grid_View" duration-ms="73" started-at="2019-02-27T14:34:05Z" finished-at="2019-02-27T14:34:06Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='main-content']/section/div/div/div[2]/section/div/div[1]/div[2]/div"}
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: '05068-020L', ip: '172.22.101.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\SUPUN_~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64921}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 354a6d5e52c3c9eba70465b13ed28aa6
-*** Element info: {Using=xpath, value=//*[@id='main-content']/section/div/div/div[2]/section/div/div[1]/div[2]/div}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='main-content']/section/div/div/div[2]/section/div/div[1]/div[2]/div"}
-  (Session info: chrome=70.0.3538.110)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: '05068-020L', ip: '172.22.101.88', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\SUPUN_~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64921}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 70.0.3538.110, webStorageEnabled: true}
-Session ID: 354a6d5e52c3c9eba70465b13ed28aa6
-*** Element info: {Using=xpath, value=//*[@id='main-content']/section/div/div/div[2]/section/div/div[1]/div[2]/div}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.getAttribute(Unknown Source)
-	at pages.AssignedTaskedPage.IsGridviewEnabled(AssignedTaskedPage.java:218)
-	at testCases.TS_002_AssignedTasks.TC_016Verify_Grid_View(TS_002_AssignedTasks.java:145)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:773)
-	at org.testng.TestRunner.run(TestRunner.java:623)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
-	at org.testng.TestNG.run(TestNG.java:1018)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        </test-method> <!-- TC_021_verify_Cancle_Submission -->
+        <test-method status="PASS" signature="TC_022_verify_SubmitSuccessFully()[pri:0, instance:testCases.TS_001_Sales_Planning@306e95ec]" name="TC_022_verify_SubmitSuccessFully" duration-ms="2" started-at="2019-03-14T16:52:46Z" finished-at="2019-03-14T16:52:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_016Verify_Grid_View -->
-        <test-method status="PASS" signature="TC_017_uit()[pri:0, instance:testCases.TS_002_AssignedTasks@2dbe250d]" name="TC_017_uit" duration-ms="1" started-at="2019-02-27T14:34:06Z" finished-at="2019-02-27T14:34:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_017_uit -->
-      </class> <!-- testCases.TS_002_AssignedTasks -->
+        </test-method> <!-- TC_022_verify_SubmitSuccessFully -->
+      </class> <!-- testCases.TS_001_Sales_Planning -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

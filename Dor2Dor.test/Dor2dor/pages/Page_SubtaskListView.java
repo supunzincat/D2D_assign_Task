@@ -2,6 +2,8 @@ package pages;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Keys;
@@ -11,10 +13,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import config.DataLoader;
 import proxy.verifications;
 
 public class Page_SubtaskListView {
 verifications verify= new verifications();
+DataLoader loadDate= new DataLoader();
 
 	
 	WebDriver driver;
@@ -23,8 +27,8 @@ verifications verify= new verifications();
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[1]/div/div/div/div/div/div/input")WebElement DistricttextBox;
 	public String districtname= "colo";
 	
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/button")WebElement Territorry;
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/div/div/input")WebElement Territorry1Textbox;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/button")WebElement Territorry;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/div/input")WebElement territorryTextbox;
 	public String TerritoryName= "col";
 	
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[6]/div/div/div/div/button/span[1]")WebElement agent;
@@ -52,29 +56,24 @@ verifications verify= new verifications();
 		PageFactory.initElements(driver, this);
 	}
 
-	public void SelectDropDown(WebElement DropdownName,WebElement Dropdowntexboxvalue,String TextValue) {
-		// TODO Auto-generated method stub
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		DropdownName.click();
-		
-		Dropdowntexboxvalue.sendKeys(TextValue);
-		
-		Dropdowntexboxvalue.sendKeys(Keys.ENTER);
-		
+//	public void SelectDropDown(WebElement DropdownName,WebElement Dropdowntexboxvalue,String TextValue) {
+//		// TODO Auto-generated method stub
+//		try {
+//			Thread.sleep(1000);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		DropdownName.click();
+//		
+//		Dropdowntexboxvalue.sendKeys(TextValue);
+//		
+//		Dropdowntexboxvalue.sendKeys(Keys.ENTER);
+//		
+//	
+//	}
 	
-	}
-	
-	public void selectALLDropdownValues() {
-		// TODO Auto-generated method stub
-		SelectDropDown(Districtvalue, DistricttextBox, districtname);
-		SelectDropDown(Territorry, Territorry1Textbox, TerritoryName);
-		SelectDropDown(agent, agentTextbox, AgentName);
-	}
+
 	
 	
 	public void SelectStartdate(WebElement datePiker) {
@@ -98,32 +97,56 @@ datePiker.sendKeys(Keys.ARROW_RIGHT);
 datePiker.sendKeys(Keys.ENTER);
 	}
 	
-	public void selectalldates() {
+	public void selectStartDate() throws IOException {
 		// TODO Auto-generated method stub
 		//verify.Selectdate(StartDate, enterDatevalueThatYouNeedToSelect, enterExpectedValue);
-		SelectStartdate(StartDate);
-		SelectEnddate(EndDate);
+	Properties prop = loadDate.LoadDataToAgenTask(); 
+		verify.Selectdate(StartDate, prop.getProperty("EnterStartDate"), prop.getProperty("VerifyStartdte"));
+//		SelectStartdate(StartDate);
+//		SelectEnddate(EndDate);
 	}
 	
-	public void submit() {
+	
+	public void selectEndDate() throws IOException {
 		// TODO Auto-generated method stub
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		SubmitButton.click();
+		//verify.Selectdate(StartDate, enterDatevalueThatYouNeedToSelect, enterExpectedValue);
+	Properties prop = loadDate.LoadDataToAgenTask(); 
+		verify.Selectdate(EndDate, prop.getProperty("EnterEndDate"), prop.getProperty("VerifyEndDate"));
+//		SelectStartdate(StartDate);
+//		SelectEnddate(EndDate);
 	}
 	
 	
-	public void verifyselectedvalue() {
+	public void verifyTerritory() throws IOException {
 		// TODO Auto-generated method stub
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-String x=Subtaskname.getText();
-System.out.println("subtask name is"+ x);
-assertEquals(x,"Sub Task 5");
+//		SelectDropDown(Districtvalue, DistricttextBox, districtname);
+//		SelectDropDown(Territorry, Territorry1Textbox, TerritoryName);
+//		SelectDropDown(agent, agentTextbox, AgentName);
+		Properties prop= loadDate.LoadDataToAgenTask();
+		//verify.verifyGlobalSelectDropDown(Territorry, Territorry1Textbox, prop.getProperty("SelectTerritoryValue"), Territorry, Territorry1Textbox, prop.getProperty("VerifySelectedTerritoryValue"));
+		verify.verifyGlobalSelectDropDown(Territorry, territorryTextbox, prop.getProperty("SelectTerritoryValue"), prop.getProperty("VerifySelectedTerritoryValue"));
 	}
+	
+	
+//	public void submit() {
+//		// TODO Auto-generated method stub
+//		try {
+//			Thread.sleep(500);
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		SubmitButton.click();
+//	}
+//	
+	
+//	public void verifyselectedvalue() {
+//		// TODO Auto-generated method stub
+//		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+//String x=Subtaskname.getText();
+//System.out.println("subtask name is"+ x);
+//assertEquals(x,"Sub Task 5");
+//	}
 	
 	public void ClickonSutask() {
 		// TODO Auto-generated method stub

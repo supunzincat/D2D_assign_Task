@@ -36,7 +36,7 @@ verifications verify= new verifications();
 	//@FindBy(how=How.XPATH,using="//*[@id='territory_id']")WebElement teriitorry;
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/button")WebElement TeriitorryLocator;	
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/div/div[1]/input")WebElement teriitoryTesxBox;
-	//
+	
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[6]/div/div/div/div/button")WebElement Status;
 	//
 	@FindBy(how=How.XPATH,using="//*[@id=\"main-content\"]/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[6]/div/div/div/div/div/div[1]/input")WebElement StatusTextBox;
@@ -152,7 +152,8 @@ Datevalue.sendKeys(Date);
 	public void SelectTerritorry() throws IOException {
 		// TODO Auto-generated method stub
 		Properties pro= dl.LoadDataToAssignTasks();
-SelectDDValues(TeriitorryLocator, teriitoryTesxBox,pro.getProperty("SelectTerritoryValue") );
+//SelectDDValues(TeriitorryLocator, teriitoryTesxBox,pro.getProperty("SelectTerritoryValue"), );
+		verify.verifyGlobalSelectDropDown(TeriitorryLocator, teriitoryTesxBox, pro.getProperty("SelectTerritoryValue"), pro.getProperty("SelectTerritoryValue"));
 	}	
 	
 	public void SelectStaus() throws IOException {

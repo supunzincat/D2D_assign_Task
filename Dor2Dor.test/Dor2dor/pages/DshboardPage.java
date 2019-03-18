@@ -2,6 +2,7 @@ package pages;
 
 import static org.testng.Assert.assertEquals;
 
+import java.awt.List;
 import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -172,20 +173,22 @@ public void loaddatabase(String EnterTableColumnName,String EnterQuery) throws C
 	ResultSet rs=Database.loadDatafromDB(EnterQuery);
 	String value = null;
 	while(rs.next()) 
-{
-	 value=rs.getString(EnterTableColumnName);
-	//System.out.println(">>>>>>>>>>Name of value is>>??<<>> "+value);
-}
+//{
+//	 value=rs.getString(EnterTableColumnName);
+//	//System.out.println(">>>>>>>>>>Name of value is>>??<<>> "+value);
+//}
 
 System.out.println(">>>>>>>>>>Name of value is>>??<<>> "+value);
 assertEquals("15", value);
 }
-	
+
+
 	public void verifywithdb() throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub
 		//"SELECT * FROM `d2d_tasks_to_bb_towers` WHERE TASK_ID=15"
-loaddatabase("SUB_TASK_ID", "SELECT * FROM `d2d_sub_task_to_agent_users`");
-	}
+loaddatabase("DEPOT_ID", "SELECT * FROM `sys_user_to_depot` WHERE USER_ID =4");
+//loaddatabase("SUB_TASK_ID", "SELECT * FROM `d2d_sub_task_to_agent_users`");
 
 
 }
+	}

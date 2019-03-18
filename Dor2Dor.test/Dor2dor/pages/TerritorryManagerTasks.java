@@ -62,7 +62,9 @@ public class TerritorryManagerTasks {
 	
 	
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/button/span[1]") WebElement DropdownTerritoryLocator;
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/div/input") WebElement DropdownTerritoryTextBox;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/div/div[1]/input") WebElement DropdownTerritoryTextBox;
+	
+	
 	String TerritoryName="AWI";
 	String expectedTerritory="AI - Awissawella Depot";
 	

@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -19,6 +21,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import com.mysql.jdbc.Connection;
@@ -36,6 +39,9 @@ public class SalesPlanningPage {
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-taskassign-top-wrap']/div[3]/div[1]/label/span") WebElement ShowPrevisitsCheckbox;
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-taskassign-top-wrap']/div[3]/div[2]/label/span") WebElement TopTenGNDivisions;
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[1]/div/div/button/span[1]") WebElement DistrictDropDown;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='districts_filter_rightbar']") WebElement DistrictDropDownall;
+	
 	
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[2]/div/div/button") WebElement TerritoryDropDown;
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[2]/div/div/div/div/input") WebElement TerriotorryTextBox;
@@ -151,6 +157,16 @@ VeriFyDropDownIsEnabled(TowersDropDown);
 	
 	}
 	
+	public void verifyDistrictDropdownValues() {
+		// TODO Auto-generated method stub
+		String[] districtDDValues= {"Colombo","gampaha"};
+		Select districtDD=new  Select(DistrictDropDownall);
+		for (int i = 0; i < districtDDValues.length; i++) {
+			
+		}
+
+	}
+	
 	
 	public void verifySelectedDistrict() throws IOException {
 		// TODO Auto-generated method stu
@@ -175,7 +191,24 @@ VeriFyDropDownIsEnabled(TowersDropDown);
 //		assertEquals(s, "Sedawatta");
 	}
 	
-	
+	public void getlistvalues() {
+		// TODO Auto-generated method stub
+//		DistrictDropDownall.click();
+Select x=new Select(DistrictDropDownall);
+List<WebElement> elementlist =x.getOptions();
+int itemcount=elementlist.size();
+for(int l = 0; l < itemcount; l++)
+{
+	List<String> genderList = new ArrayList<String>();
+	for (WebElement G : elementlist ) {
+	    genderList.add(G.getText());
+	}
+	System.out.println(genderList);
+    System.out.println(elementlist.get(l).getText());
+    
+    
+}
+	}
 	
 	public void Selectdate(WebElement datePiker) {
 		// TODO Auto-generated method stub

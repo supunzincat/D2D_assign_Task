@@ -1,0 +1,22 @@
+------------------Expected values----------------------
+
+districtLable=District *
+TerritorryLable=Territory *
+GNDivisionLable=GN Divisions *
+StartDateLable=Start date *
+EndDateLable=End date *
+TowerLable=Towers
+RemarksLable=Remarks
+ExpectingColombo=Colombo
+ExpectedTerritorry=COL - Colombo Depot
+ExpectedGNDivision=Sedawatta
+expectedStartDate=2018-12-13
+expectedEndDate=2019-12-13
+messagetext=Are you sure you need to assign this task to Chamodi Wijewardana ?
+
+-----------------entering values----------------------
+selectColombo=Colombo
+enterTerritory=col
+enterGNDivision=sedawa
+Enterstartdate=2018-12-13
+EnterEndDate=2019-12-13
