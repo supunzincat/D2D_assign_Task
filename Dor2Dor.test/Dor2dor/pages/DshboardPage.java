@@ -53,6 +53,9 @@ public class DshboardPage  {
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[6]/label") WebElement TowersLableLocatorr;
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-tassign-rightbar-wrap']/form/div[7]/label") WebElement RemarksLableLocatorr;
 	
+	@FindBy(how=How.XPATH,using="//*[@id='districts_filter_rightbar']") WebElement DistrictDropdown;
+	@FindBy(how=How.XPATH,using="//*[@id='territory_filter_rightbar']") WebElement territryDropDown;
+	
 	
 	
 	public DshboardPage(WebDriver d2) {
@@ -191,4 +194,21 @@ loaddatabase("DEPOT_ID", "SELECT * FROM `sys_user_to_depot` WHERE USER_ID =4");
 
 
 }
+	
+	String[] districtvalues = {"ANY","Please Select","Colombo","Gampaha","Kalutara","Galle","Hambantota","Badulla","Ratnapura"};
+	
+	public void verifyAllTheDistrictdropdownValues() {
+		// TODO Auto-generated method stub
+		VerifyText.verifyAllDropdownValues(DistrictDropdown,districtvalues);
+	}
+	
+	
+
+	String[] territoryValues = {"Please Select","AWI - Awissawella Depot","COL - Colombo Depot","PIL - Piliyandala Depot"};
+	public void verifyAllTheTerritorrdropdownValues() {
+		// TODO Auto-generated method stub
+		VerifyText.verifyAllDropdownValues(territryDropDown,territoryValues);
+	}
+	
+	
 	}
