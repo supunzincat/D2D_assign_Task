@@ -34,7 +34,7 @@ public class verifications {
 	
 		
 	//Tis will verify all the dropdown values
-		public void verifyAllDropdownValues(WebElement dropdown,String[] exp) {
+	public void verifyAllDropdownValues(WebElement dropdown,String[] exp) {
 		// TODO Auto-generated method stub
 		int arraycount=0;
 				
@@ -197,6 +197,34 @@ assertEquals(valueofdatepiker, enterExpectedValue);
 		assertTrue(s.contains(EntervalueNeedToVerify));
 
 	}
+	
+	
+	
+	
+	public void VerifyMultiSelectFunctionality(WebElement TeriitorryLocator,WebElement LocatorTextBox,
+			String FirstValueSholudBeselected,String SecondValueShouldBeselected,String ThirdValueShouldBeselected,int CountOfValuesShouldBeSelected,String enterexpectedcvalue) {
+		// TODO Auto-generated method stub
+		TeriitorryLocator.click();
+		for (int i = 1; i <= CountOfValuesShouldBeSelected; i++) {
+			LocatorTextBox.clear();
+			if (i==1) {
+				LocatorTextBox.sendKeys(FirstValueSholudBeselected);
+				LocatorTextBox.sendKeys(Keys.RETURN);
+						}
+			else if(i==2) {
+				LocatorTextBox.sendKeys(SecondValueShouldBeselected);
+				LocatorTextBox.sendKeys(Keys.RETURN);	
+							}
+				else {
+					LocatorTextBox.sendKeys(ThirdValueShouldBeselected);
+					LocatorTextBox.sendKeys(Keys.RETURN);	
+				}
+			}
+		String countselected=TeriitorryLocator.getText();
+		assertEquals(countselected, enterexpectedcvalue);
+		System.out.println(countselected);
+	}
+
 	
 	
 }

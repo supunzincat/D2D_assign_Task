@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import config.LaunchWebDriver;
@@ -22,8 +23,8 @@ public class TS_001_Sales_Planning {
 	DshboardPage dashbord= new DshboardPage(d);
 	SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 	
-	@Test(priority=1)
-	public void TC_001_verify_User_Able_TO_Navigate_Dashboard() throws IOException 
+	@BeforeTest
+	public void LoginTowom() throws IOException 
 	{
 		// TODO Auto-generated method stub
 		LoginPage Login= new LoginPage(d);
@@ -32,23 +33,22 @@ public class TS_001_Sales_Planning {
 	}
 	
 	
-	@Test(priority=2)
-	public void TC_002_Verify_navigateTo_SalesPlanning() throws ClassNotFoundException, SQLException {
+	@Test(priority=1)
+	public void TC_001_Verify_navigateTo_SalesPlanning() throws ClassNotFoundException, SQLException {
 		//// TODO Auto-generated method stub
 		DshboardPage dashbord= new DshboardPage(d);
 		dashbord.NavigateToSalesPlanning();
-//		d.findElement(By.xpath("//select[@id='depot']")).isEnabled();
-		//taskAssign.getlistvalues();
-	//	dashbord.verifywithdb();
+
 }
 	
-	
+	/////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////
 	@Test(priority=3)
 	public void TC_003_Verify_District_Lable() throws IOException, ClassNotFoundException, SQLException {
 	// TODO Auto-generated method stub
 		//dashbord.verifyAllTheDistrictdropdownValues();
-		//dashbord.verifyDistrictLable();
-		taskAssign.dbconnection();
+	dashbord.verifyDistrictLable();
+//		taskAssign.dbconnection();
 		}
 	
 	
@@ -93,7 +93,14 @@ public class TS_001_Sales_Planning {
 			dashbord.verifyRemarksLable();
 			}
 	
+	/////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////
 	
+	
+	
+	//////////////////////////////////////////////////////////
+	//verify enabled ///////////////////////////////////////
+	//////////////////////////////////////////////////////////
 	@Test(priority=10)
 	public void TC_010_VerifyIs_District_DropdownEnabled() {
 		// TODO Auto-generated method stub
@@ -117,9 +124,7 @@ public class TS_001_Sales_Planning {
 		SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 		taskAssign.VerifyIsGNDivisionsDropdownEnabled();
 	}
-	
-	
-	
+
 	
 	@Test(priority=13)
 	public void TC_013_VerifyIs_Towers_DropdownEnabled() {
@@ -129,11 +134,12 @@ public class TS_001_Sales_Planning {
 		taskAssign.verifytowerDDStatus(Status.disble);
 	}
 	
+	
 	//this will verify the all values in the dd
 	@Test(priority=14)
 	public void verifyDistrictvalues() {
 		// TODO Auto-generated method stub
-dashbord.verifyAllTheDistrictdropdownValues();
+		dashbord.verifyAllTheDistrictdropdownValues();
 	}
 		
 	@Test(priority=15)

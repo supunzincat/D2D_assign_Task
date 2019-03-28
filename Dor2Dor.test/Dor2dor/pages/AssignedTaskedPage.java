@@ -217,45 +217,63 @@ submitbutton.click();
 		// TODO Auto-generated method stub
 		GridviewRadioBtn.click();
 String tumbanil=Gridview.getAttribute("class");
-assertEquals(tumbanil, "thumbnail");
+assertEquals(tumbanil, "row");
 	}
 	
 	public void IsTableviewEnabled() {
 		// TODO Auto-generated method stub
 		TableViewRadioButton.click();
 String tumbanil=TableView.getAttribute("class");
-assertEquals(tumbanil, "table-count-wrap clearfix");
+assertEquals(tumbanil, "submit-form");
 	}
+	
 	
 	public void VerifyMultiSelectFunctionality(WebElement LocatorofDropDown,WebElement LocatorTextBox,
-			String FirstValueSholudBeselected,String SecondValueShouldBeselected,String ThirdValueShouldBeselected,int CountOfValuesShouldBeSelected) {
+			String FirstValueSholudBeselected,String SecondValueShouldBeselected,String ThirdValueShouldBeselected,int CountOfValuesShouldBeSelected,String enterexpectedcvalue) {
 		// TODO Auto-generated method stub
-		LocatorofDropDown.click();
-for (int i = 1; i <= CountOfValuesShouldBeSelected; i++) {
-	LocatorTextBox.clear();
-	if (i==1) {
-		LocatorTextBox.sendKeys(FirstValueSholudBeselected);
-		LocatorTextBox.sendKeys(Keys.RETURN);
+		for (int i = 0; i < 20; i++) {
+			if (LocatorTextBox.isDisplayed()) {
+				for (int z = 1; z <= CountOfValuesShouldBeSelected; z++) {
+					LocatorTextBox.clear();
+					if (z==1) {
+						LocatorTextBox.sendKeys(FirstValueSholudBeselected);
+						LocatorTextBox.sendKeys(Keys.RETURN);
+								}
+					else if(z==2) {
+						LocatorTextBox.sendKeys(SecondValueShouldBeselected);
+						LocatorTextBox.sendKeys(Keys.RETURN);	
+									}
+						else {
+							LocatorTextBox.sendKeys(ThirdValueShouldBeselected);
+							LocatorTextBox.sendKeys(Keys.RETURN);	
+						}
+					}
+						
+			}
+			LocatorofDropDown.click();
+			break;
+		}
+		
+		String countselected=TeriitorryLocator.getText();
+		assertEquals(countselected, enterexpectedcvalue);
+		System.out.println(countselected);
 	}
-	else if(i==2) {
-		LocatorTextBox.sendKeys(SecondValueShouldBeselected);
-		LocatorTextBox.sendKeys(Keys.RETURN);	
-	}
-	else {
-		LocatorTextBox.sendKeys(ThirdValueShouldBeselected);
-		LocatorTextBox.sendKeys(Keys.RETURN);	
-	}
+
 	
-}
-String countselected=TeriitorryLocator.getText();
-System.out.println(countselected);
-	}
+	
+	
 	
 	public void multiselectrDistrict() throws IOException {
 		// TODO Auto-generated method stub
 		Properties prop= dl.LoadDataToAssignTasks();
 		
-VerifyMultiSelectFunctionality(TeriitorryLocator, teriitoryTesxBox, prop.getProperty("DistrictFirstValue"), prop.getProperty("DistrictSecondValue"), prop.getProperty("DistrictThirdValue"), 3);
+VerifyMultiSelectFunctionality(TeriitorryLocator, teriitoryTesxBox, prop.getProperty("DistrictFirstValue"), prop.getProperty("DistrictSecondValue"), prop.getProperty("DistrictThirdValue"), 3,"2 Items Selected");
 	}
+	
+	public void verifyDropDownistInTheDistrict() {
+		// TODO Auto-generated method stub
+
+	}
+	
 	
 }

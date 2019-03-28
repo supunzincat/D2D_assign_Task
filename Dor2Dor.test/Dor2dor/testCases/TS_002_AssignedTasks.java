@@ -110,7 +110,15 @@ WebDriver d= config.LaunchWebDriver.WebdriverLaunch();
 		mytask.SelectTerritorry();
 		mytask.VerifyTerritorryValue();
 	}
+	
 	@Test(priority=12)
+	public void TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown() throws IOException {
+		// TODO Auto-generated method stub
+		mytask.multiselectrDistrict();
+	}
+	
+	
+	@Test(priority=13)
 	public void TC_012_Verify_select_Status() throws IOException {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
@@ -118,7 +126,7 @@ WebDriver d= config.LaunchWebDriver.WebdriverLaunch();
 mytask.VerifyStatusyValue();
 	}
 	
-	@Test(priority=13)
+	@Test(priority=14)
 	public void TC_013_Verify_click_sublit() {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
@@ -126,16 +134,19 @@ mytask.verifySelctButton();
 	}
 	
 	
-	@Test(priority=14)
-	public void TC_014_Verify_Multiselect_Functionlity_OF_District_Dropdown() throws IOException {
-		// TODO Auto-generated method stub
-mytask.multiselectrDistrict();
-	}
+//	
+//	public void TC_014_Verify_district_in_the_drop_down() {
+//		// TODO Auto-generated method stub
+//		mytask.verifyDropDownistInTheDistrict();
+//	}
+//	
+
+	
 	@Test(priority=15)
 	public void TC_015_Verify_Table_View() {
 		// TODO Auto-generated method stub
 		//AssignedTaskedPage mytask= new AssignedTaskedPage(d);
-mytask.IsTableviewEnabled();
+		mytask.IsTableviewEnabled();
 	}
 	
 	@Test(priority=16)
