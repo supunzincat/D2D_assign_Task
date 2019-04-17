@@ -99,27 +99,35 @@ public class TS_003_TerritorryManagerTasks {
 	}
 
 	@Test(priority=12)
+	public void verify_all_values_in_the_DD() {
+		// TODO Auto-generated method stub
+		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
+		page.verifyallTerritorryDDValues();
+	}
+	
+	@Test(priority=13)
 	public void TC_012_verif_selectStatusValue() throws IOException {
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.selectStatusValue();
 	}
 	
-	@Test(priority=13)
+	
+	@Test(priority=14)
 	public void TC_013_verif_SubmitButton(){
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.veriFySubmitButton();
 	}
 	
-	@Test(priority=14)
+	@Test(priority=15)
 	public void TC_014_verif_Defaultview(){
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);
 		page.verifyTableViewRadioButton();
 	}
 	
-	@Test(priority=15)
+	@Test(priority=16)
 	public void TC_015_verif_GridviewIsEnabled(){
 		// TODO Auto-generated method stub
 		TerritorryManagerTasks page= new TerritorryManagerTasks(driver);

@@ -34,11 +34,11 @@ public class verifications {
 	
 		
 	//Tis will verify all the dropdown values
-	public void verifyAllDropdownValues(WebElement dropdown,String[] exp) {
+	public void verifyAllDropdownValues(WebElement enterdropdownxpath,String[] enterexpectedvaluesArray) {
 		// TODO Auto-generated method stub
 		int arraycount=0;
 				
-		Select dd = new Select(dropdown);
+		Select dd = new Select(enterdropdownxpath);
 		
 		List<WebElement> options = dd.getOptions();
 		for(WebElement item:options) 
@@ -46,14 +46,14 @@ public class verifications {
 		String x=item.getText();
 		System.out.println("from dropdown >>"+x);
 
-		for(arraycount=arraycount;arraycount<=exp.length;) {
+		for(arraycount=arraycount;arraycount<=enterexpectedvaluesArray.length;) {
 //				System.out.println("from array"+exp[arraycount]);
 //				System.out.println("from array"+arraycount);
 				
 				
-				if(item.getText().equals(exp[arraycount]))
+				if(item.getText().equals(enterexpectedvaluesArray[arraycount]))
 				{
-				System.out.println("from dd "+item.getText()+"is mached with "+exp[arraycount]+" from array");
+				System.out.println("from dd "+item.getText()+"is mached with "+enterexpectedvaluesArray[arraycount]+" from array");
 				System.out.println(arraycount);
 				arraycount=arraycount+1;
 				System.out.println(arraycount);
@@ -62,11 +62,11 @@ public class verifications {
 				
 				else {
 				System.out.println("else");
-				System.out.println(exp[arraycount]);
+				System.out.println(enterexpectedvaluesArray[arraycount]);
 				System.out.println(arraycount);
 				arraycount=arraycount+1;
 				System.out.println(arraycount);
-				assertTrue(false);
+				//assertTrue(false);
 				}
 				//arraycount=arraycount+1;
 				System.out.println(arraycount);

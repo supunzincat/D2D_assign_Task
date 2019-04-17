@@ -10,7 +10,7 @@ import pages.DshboardPage;
 import pages.LoginPage;
 import pages.AssignedTaskedPage;
 
-public class TS_002_AssignedTasks {
+public class TS_002_AssignedTasksCM {
 WebDriver d= config.LaunchWebDriver.WebdriverLaunch();
 	
 	AssignedTaskedPage mytask= new AssignedTaskedPage(d);

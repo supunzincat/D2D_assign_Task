@@ -45,7 +45,7 @@ public void TC003_Verify_SelectEndDate() throws IOException {
 	//Page_SubtaskListView subtask= new Page_SubtaskListView(driver);
 	subtask.selectEndDate();
 	
-//	subtask.submit();
+	
 	//subtask.verifyselectedvalue();
 //selectALLDropdownValues
 }
@@ -57,23 +57,24 @@ public void TC003_Verify_SelectTerritory() throws IOException {
 	//Page_SubtaskListView subtask= new Page_SubtaskListView(driver);
 	subtask.verifyTerritory();
 	
-//	subtask.submit();
+	//subtask.submit();
 	//subtask.verifyselectedvalue();
 //selectALLDropdownValues
 }
 
-//	@Test(priority=3)
-//	public void TC003_Verify_view_subtask_popup() {
-//		//when user click on sub task link sub task popup should be display
-//		Page_SubtaskListView subtask= new Page_SubtaskListView(driver);
-//		subtask.ClickonSutask();
-//		subtask.verifyTerritory();
-//		}
-//	
-//	@Test(priority=4)
-//	public void TC004_Verify_subtask_Name () {
-//		//when user click on sub task link sub task popup should be display
-//		Page_SubtaskListView subtask= new Page_SubtaskListView(driver);
-//		subtask.verifyTaskname();
-//		}
+	@Test(priority=3)
+	public void TC003_Verify_view_subtask_popup() throws IOException {
+		//when user click on sub task link sub task popup should be display
+		//Page_SubtaskListView subtask= new Page_SubtaskListView(driver);
+		subtask.submit();
+		subtask.ClickonSutask();
+		subtask.verifyTerritory();
+		}
+	
+	@Test(priority=4)
+	public void TC004_Verify_subtask_Name () {
+		//when user click on sub task link sub task popup should be display
+		Page_SubtaskListView subtask= new Page_SubtaskListView(driver);
+		subtask.verifyTaskname();
+		}
 }

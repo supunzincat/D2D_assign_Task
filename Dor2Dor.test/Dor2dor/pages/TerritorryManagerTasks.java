@@ -23,6 +23,7 @@ public class TerritorryManagerTasks {
      public void setTime (String t) {time = t; } public String getTime() {  return time;  } 
 	
     DataLoader dl = new DataLoader();
+    verifications verify= new verifications();
     
     
     
@@ -46,10 +47,12 @@ public class TerritorryManagerTasks {
 	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/label") WebElement TerritorryLocator;
 	//String TerritoryText="Territory *";
 	
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[4]/div/div/label") WebElement StatusLocator;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/label") WebElement StatusLocator;
+	
 	//String StatusText="Status";
 	
 	@FindBy(how=How.XPATH,using="//*[@id='cluster_order_by_label']") WebElement OnlyexpirdtasktextLocator;
+	
 	//String onlyexpiredtaskText="Only expired tasks";
 	
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-task-list-sdate']") WebElement StartDateLocator;
@@ -61,15 +64,19 @@ public class TerritorryManagerTasks {
 	String EnddateExpectedvalue="2019-02-24";
 	
 	
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/button/span[1]") WebElement DropdownTerritoryLocator;
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/div/div[1]/input") WebElement DropdownTerritoryTextBox;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/button") WebElement DropdownTerritoryLocator;
+	//*[@id="territory_id"]
+	
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[3]/div/div/div/div/div/input") WebElement DropdownTerritoryTextBox;
 	
 	
 	String TerritoryName="AWI";
 	String expectedTerritory="AI - Awissawella Depot";
 	
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[4]/div/div/div/div/button/span[1]") WebElement DropdownStatusLocator;
-	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[4]/div/div/div/div/div/div[1]/input") WebElement DropdownStatusTextBox;
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/div/button") WebElement DropdownStatusLocator;
+	
+	@FindBy(how=How.XPATH,using="//*[@id='main-content']/section/div/div/div[1]/section[1]/div[1]/form/fieldset/div[5]/div/div/div/div/div/div[1]/input") WebElement DropdownStatusTextBox;
+	
 	String DropDownStatus="assi";
 	
 	@FindBy(how=How.XPATH,using="//*[@id='d2d-task-save-btn']") WebElement SubmitButtonLocator;
@@ -79,6 +86,7 @@ public class TerritorryManagerTasks {
 	@FindBy(how=How.XPATH,using="//*[@id='table_view']") WebElement TableViewLocator;
 	
 	@FindBy(how=How.XPATH,using="//*[@id='grid_view']") WebElement GridViewLocator;
+	@FindBy(how=How.XPATH,using="//*[@id=\"territory_id\"]") WebElement dropdownterritorry;
 	
 	
 	public TerritorryManagerTasks(WebDriver driver) {
@@ -113,6 +121,7 @@ public class TerritorryManagerTasks {
 	public void VerifyText(WebElement EnterFildForValidate,String enterExpectedValueForValidate) throws IOException {
 		String valueoftext=EnterFildForValidate.getText();
 		 assertEquals(valueoftext,enterExpectedValueForValidate);
+		 
 		//System.out.println(valueoftext);
 	//	 veriGl.VerifyTextgloble(EnterFildForValidate, enterExpectedValueForValidate);
 	}
@@ -200,7 +209,9 @@ EnterDate(StartDateLocator, prop.getProperty("EnterringStartDate"),prop.getPrope
 		// TODO Auto-generated method stub
 		Properties prop = dl.LoadDataToTerritorryMangerTasks();
 		//EnterValuesForDropdown(DropdownTerritoryLocator, DropdownTerritoryTextBox, TerritoryName,expectedTerritory);
-		EnterValuesForDropdown(DropdownTerritoryLocator, DropdownTerritoryTextBox, prop.getProperty("EnterTerritoryName"),prop.getProperty("ExpectedTerritory"));
+		//EnterValuesForDropdown(DropdownTerritoryLocator, DropdownTerritoryTextBox, prop.getProperty("EnterTerritoryName"),prop.getProperty("ExpectedTerritory"));
+		verifications verify = new verifications();
+		verify.verifyGlobalSelectDropDown(DropdownTerritoryLocator, DropdownTerritoryTextBox, prop.getProperty("EnterTerritoryName"),prop.getProperty("ExpectedTerritory"));
 	}
 
 	public void selectStatusValue() throws IOException {
@@ -239,4 +250,11 @@ TableLocator.isEnabled();
 		verifyGridViewOrTableView(GridViewLocator);
 	}
 	
+	
+	public void verifyallTerritorryDDValues() {
+		// TODO Auto-generated method stub
+		String[] districtvalues = {"Please Select","Please select","AWI - Awissawella Depot","COL - Colombo Depot","GAM - Gampaha Depot","NEG - Negombo Depot","PIL - Piliyandala Depot","BAL - Balapitiya Depot","ELP - Elpitiya Depot","EMB - Embilipitiya Depot","GAL - Galle Depot"};
+		
+verify.verifyAllDropdownValues(dropdownterritorry, districtvalues);
+	}
 }

@@ -40,8 +40,8 @@ public class DshboardPage  {
 	@FindBy(how=How.XPATH,using="//*[contains(text(),'Agent Task View')]")  WebElement AgentTaskView;
 	String AgentTaskViewUrl="http://wom/v3staging/d2d/SubTaskList/view";
 	
-	@FindBy(how=How.XPATH,using="//*[contains(text(),'Territory Manager Tasks')]") WebElement TerritorryManagerTasks;
-	String TerritorryManagerTasksUrl="http://wom/v3staging/d2d/TerritoryManager/view";
+	@FindBy(how=How.XPATH,using="//*[contains(text(),'Assigned Tasks')]") WebElement TerritorryManagerTasks;
+	String TerritorryManagerTasksUrl="http://wom/v3staging/d2d/ClusterManager/view";
 	
 	
 	

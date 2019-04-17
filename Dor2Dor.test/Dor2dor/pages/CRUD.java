@@ -111,9 +111,9 @@ ddtextbox.sendKeys(Keys.ENTER);
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-selectdd(Username, usernametextbox, "root");
+selectdd(Username, usernametextbox, "supu");
 
-selectdd(Territory, territorytextbox, "neg");
+selectdd(Territory, territorytextbox, "awis");
 addbutton.click();
 //verifysucsessmessage();
 

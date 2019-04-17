@@ -3,11 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TS005__AgentTaskView">
+      <class name="testCases.TS_003_TerritorryManagerTasks">
         <methods>
-          <include name="TC003_Verify_SelectTerritory"/>
+          <include name="TC_008_verif_OnlyExpiredTsks_Text"/>
+          <include name="TC_011_verif_SelectTerritoryValue"/>
+          <include name="verify_all_values_in_the_DD"/>
+          <include name="TC_012_verif_selectStatusValue"/>
         </methods>
-      </class> <!-- testCases.TS005__AgentTaskView -->
+      </class> <!-- testCases.TS_003_TerritorryManagerTasks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
