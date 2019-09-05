@@ -24,8 +24,10 @@ import pages.SalesPlanningPage.Status;
 public class verifications {
 
 	DataLoader dl= new DataLoader();
+	WomActions womactions= new WomActions();
 	
 	public void VerifyTextgloble(WebElement EnterFildForValidate,String enterExpectedValueForValidate) throws IOException {
+		womactions.setwait(500);
 		String valueoftext=EnterFildForValidate.getText();
 		 assertEquals(valueoftext,enterExpectedValueForValidate);
 		//System.out.println(valueoftext);
@@ -197,10 +199,7 @@ assertEquals(valueofdatepiker, enterExpectedValue);
 		assertTrue(s.contains(EntervalueNeedToVerify));
 
 	}
-	
-	
-	
-	
+		
 	public void VerifyMultiSelectFunctionality(WebElement TeriitorryLocator,WebElement LocatorTextBox,
 			String FirstValueSholudBeselected,String SecondValueShouldBeselected,String ThirdValueShouldBeselected,int CountOfValuesShouldBeSelected,String enterexpectedcvalue) {
 		// TODO Auto-generated method stub
@@ -225,6 +224,18 @@ assertEquals(valueofdatepiker, enterExpectedValue);
 		System.out.println(countselected);
 	}
 
+	public void verifyNavigation(WebDriver d,String expectedUrl) {
+	String currenturl=d.getCurrentUrl();
+	assertEquals(currenturl, expectedUrl);
+	}
 	
-	
+	public void verifypopup(WebElement enterButtonHere,WebElement enterthemessagetileelement,String enterExpectedvalue) {
+		// TODO Auto-generated method stub
+		
+		womactions.setwait(500);
+		enterButtonHere.click();
+		womactions.setwait(500);
+		String x= enterthemessagetileelement.getText();
+		assertEquals(x, enterExpectedvalue);
+	}
 }

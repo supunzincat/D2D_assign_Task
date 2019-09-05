@@ -22,7 +22,7 @@ import proxy.verifications;
 
 
 
-public class DshboardPage  {
+public class DashboardPage  {
 	
 	verifications VerifyText= new verifications();
 	DataLoader loaddata= new DataLoader();
@@ -56,9 +56,11 @@ public class DshboardPage  {
 	@FindBy(how=How.XPATH,using="//*[@id='districts_filter_rightbar']") WebElement DistrictDropdown;
 	@FindBy(how=How.XPATH,using="//*[@id='territory_filter_rightbar']") WebElement territryDropDown;
 	
+	@FindBy (how=How.XPATH,using="//*[contains(text(),'Add Cluster Manager')]") WebElement addClusterManager;
 	
 	
-	public DshboardPage(WebDriver d2) {
+	
+	public DashboardPage(WebDriver d2) {
 		// TODO Auto-generated constructor stub
 		this.d=d2;
 		PageFactory.initElements(d, this);
@@ -82,7 +84,7 @@ AsignTaskSubmenue.click();
 
 	}
 	
-	public void ClickOnDortoDor() {
+	public void navigateToDortoDor() {
 		// TODO Auto-generated method stub
 DooorToDoorTab.click();
 	}
@@ -210,5 +212,26 @@ loaddatabase("DEPOT_ID", "SELECT * FROM `sys_user_to_depot` WHERE USER_ID =4");
 		VerifyText.verifyAllDropdownValues(territryDropDown,territoryValues);
 	}
 	
+
 	
+	
+	public void verifyNavigattoAddClusterManagerPage() {
+		// TODO Auto-generated method stub
+//		String expectedUrl="http://wom/v3staging/d2d/ClusterManagerController/view";
+//		String currenturl=d.getCurrentUrl();
+//		assertEquals(currenturl, expectedUrl);
+		VerifyText.verifyNavigation(d, "http://wom/v3staging/d2d/ClusterManagerController/view");
+
+	}
+	
+	public void navigateToAddClusterManagerqq() {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		addClusterManager.click();
+	}
 	}

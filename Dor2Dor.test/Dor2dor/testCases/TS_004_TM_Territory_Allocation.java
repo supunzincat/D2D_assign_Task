@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import config.LaunchWebDriver;
 import pages.CRUD;
-import pages.DshboardPage;
+import pages.DashboardPage;
 import pages.LoginPage;
 import pages.AssignedTaskedPage;
 
@@ -26,8 +26,8 @@ public void TC_001_verify_User_Able_TO_Navigate_Dashboard() throws IOException {
 @Test(priority=2)
 public void TC_002_Verify_Navigate_To_Crud() {
 	// TODO Auto-generated method stub
-	DshboardPage dashbord= new DshboardPage(driver);
-	dashbord.ClickOnDortoDor();
+	DashboardPage dashbord= new DashboardPage(driver);
+	dashbord.navigateToDortoDor();
 	try {
 		Thread.sleep(5000);
 	} catch (InterruptedException e) {

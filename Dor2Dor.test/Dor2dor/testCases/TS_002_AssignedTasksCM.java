@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 //import Config.LaunchWebDriver;
-import pages.DshboardPage;
+import pages.DashboardPage;
 import pages.LoginPage;
 import pages.AssignedTaskedPage;
 
@@ -25,8 +25,8 @@ WebDriver d= config.LaunchWebDriver.WebdriverLaunch();
 	@Test(priority=2)
 	public void TC_002_Verify_Navigate_TO_MyTask() {
 		// TODO Auto-generated method stub
-		DshboardPage dashbord= new DshboardPage(d);
-		dashbord.ClickOnDortoDor();
+		DashboardPage dashbord= new DashboardPage(d);
+		dashbord.navigateToDortoDor();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

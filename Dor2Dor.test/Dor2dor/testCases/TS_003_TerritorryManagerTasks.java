@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import config.LaunchWebDriver;
-import pages.DshboardPage;
+import pages.DashboardPage;
 import pages.LoginPage;
 import pages.TerritorryManagerTasks;
 import proxy.verifications;
@@ -19,8 +19,8 @@ public class TS_003_TerritorryManagerTasks {
 		//this will click on territorry manager link and navigate to territory manger Task
 		LoginPage log= new LoginPage(driver);
 		log.LoginToWom();
-		DshboardPage dsh= new DshboardPage(driver);
-		dsh.ClickOnDortoDor();
+		DashboardPage dsh= new DashboardPage(driver);
+		dsh.navigateToDortoDor();
 		dsh.navigatetoTerritoryManagarTask();	
 }
 	

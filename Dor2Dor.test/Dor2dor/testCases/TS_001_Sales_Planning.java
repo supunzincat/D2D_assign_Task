@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import config.LaunchWebDriver;
-import pages.DshboardPage;
+import pages.DashboardPage;
 import pages.LoginPage;
 import pages.SalesPlanningPage;
 import pages.SalesPlanningPage.Status;
@@ -13,7 +13,7 @@ import pages.SalesPlanningPage.Status;
 public class TS_001_Sales_Planning {
 	
 	WebDriver d=LaunchWebDriver.WebdriverLaunch();
-	DshboardPage dashbord= new DshboardPage(d);
+	DashboardPage dashbord= new DashboardPage(d);
 	SalesPlanningPage taskAssign= new SalesPlanningPage(d);
 	
 	@BeforeTest
@@ -27,7 +27,7 @@ public class TS_001_Sales_Planning {
 	@Test(priority=1)
 	public void TC_001_Verify_navigateTo_SalesPlanning() throws ClassNotFoundException, SQLException {
 		//// TODO Auto-generated method stub
-		DshboardPage dashbord= new DshboardPage(d);
+		DashboardPage dashbord= new DashboardPage(d);
 		dashbord.NavigateToSalesPlanning();
 }
 

@@ -3,14 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TS_003_TerritorryManagerTasks">
+      <class name="testCases.TS_001_Sales_Planning">
         <methods>
-          <include name="TC_008_verif_OnlyExpiredTsks_Text"/>
-          <include name="TC_011_verif_SelectTerritoryValue"/>
-          <include name="verify_all_values_in_the_DD"/>
-          <include name="TC_012_verif_selectStatusValue"/>
+          <include name="TC_021_verify_Click_tower_Check_Box"/>
+          <include name="TC_017_select_Terriotorry"/>
+          <include name="TC_016_verifyTerritoryvalues"/>
+          <include name="TC_0014_verifyDistrictvalues"/>
+          <include name="TC_023_verify_Cancle_Submission"/>
+          <include name="LoginTowom"/>
+          <include name="TC_024_verify_SubmitSuccessFully"/>
+          <include name="TC_025_districtValue"/>
         </methods>
-      </class> <!-- testCases.TS_003_TerritorryManagerTasks -->
+      </class> <!-- testCases.TS_001_Sales_Planning -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
