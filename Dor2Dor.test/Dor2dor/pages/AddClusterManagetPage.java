@@ -47,7 +47,7 @@ public class AddClusterManagetPage {
 		// TODO Auto-generated method stub
 		womaction.setwait(500);
 		womaction.clickonbutton(AddButton);
-		verify.VerifyTextgloble(errorMessageForemptyUserName, "This field cannot be empty");
+		verify.VerifyTextgloble(errorMessageForemptyUserName, "This field cannot be empty");//
 	}
 	
 	public void verifyUsername() throws IOException {
