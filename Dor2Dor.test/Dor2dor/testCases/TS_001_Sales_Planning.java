@@ -30,7 +30,7 @@ public class TS_001_Sales_Planning {
 		DashboardPage dashbord= new DashboardPage(d);
 		dashbord.NavigateToSalesPlanning();
 }
-
+//
 	@Test(priority=3)
 	public void TC_003_Verify_District_Lable() throws IOException, ClassNotFoundException, SQLException {
 	// TODO Auto-generated method stub
