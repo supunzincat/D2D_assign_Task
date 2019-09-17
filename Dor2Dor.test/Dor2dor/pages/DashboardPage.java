@@ -26,12 +26,11 @@ public class DashboardPage  {
 	
 	verifications VerifyText= new verifications();
 	DataLoader loaddata= new DataLoader();
-
 	WebDriver d;
 	
 	//@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/a") WebElement DooorToDoorTab;
 	@FindBy (how=How.XPATH,using="//*[contains(text(),'DOOR TO DOOR')]") WebElement DooorToDoorTab;
-	
+	@FindBy (how=How.XPATH,using="//*[contains(text(),'Sub Task Detailed Report')]") WebElement SubtaskDetailedreport;
 	//@FindBy (how=How.XPATH,using="//*[@id='nav-accordion']/li[8]/ul[5]/li/a") WebElement AsignTaskSubmenue;
 	@FindBy (how=How.XPATH,using="//*[contains(text(),'Sales Planning')]") WebElement AsignTaskSubmenue;
 	@FindBy(how=How.XPATH,using="//*[contains(text(),'Assigned Tasks')]") WebElement MYTaskText;
@@ -39,7 +38,6 @@ public class DashboardPage  {
 	
 	@FindBy(how=How.XPATH,using="//*[contains(text(),'Agent Task View')]")  WebElement AgentTaskView;
 	String AgentTaskViewUrl="http://wom/v3staging/d2d/SubTaskList/view";
-	
 	@FindBy(how=How.XPATH,using="//*[contains(text(),'Assigned Tasks')]") WebElement TerritorryManagerTasks;
 	String TerritorryManagerTasksUrl="http://wom/v3staging/d2d/ClusterManager/view";
 	
@@ -66,31 +64,51 @@ public class DashboardPage  {
 		PageFactory.initElements(d, this);
 	}
 
+	//In this function user will navigate to door to door moudule
+		public void navigateToDortoDor() {
+		// TODO Auto-generated method stub
+			DooorToDoorTab.click();
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+	// 	TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	
+		public void navigatetosubmenu(WebElement listItem,String CurrentUrl) {
+			// TODO Auto-generated method stub
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			listItem.click();
+			String actualUrl=d.getCurrentUrl();
+			assertEquals(actualUrl, CurrentUrl);
+			
+		}
+	
 	public void NavigateToSalesPlanning() {
 		// TODO Auto-generated method stub
-DooorToDoorTab.click();
-
-try {
-	Thread.sleep(3000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-
-AsignTaskSubmenue.click();
+		navigateToDortoDor();
+		AsignTaskSubmenue.click();
 //String CurrentUrl=d.getCurrentUrl();
 //System.out.println(CurrentUrl);
 //assertEquals(CurrentUrl, "http://wom/v3staging/d2d/AssignTask/index");
 
 	}
-	
-	public void navigateToDortoDor() {
+		
+	public void NavigateToSubtaskDetailReport() {
 		// TODO Auto-generated method stub
-DooorToDoorTab.click();
+		navigateToDortoDor();
+		navigatetosubmenu(SubtaskDetailedreport, "http://wom/v3staging/d2d/SubTaskDetailsReport/view");
 	}
 	
-public void NavigteToAssignedTasks() {
+	public void NavigteToAssignedTasks() {
 	// TODO Auto-generated method stub
+	navigateToDortoDor();
 MYTaskText.click();
 String actualUrl=d.getCurrentUrl();
 assertEquals(actualUrl, "http://wom/v3staging/d2d/ClusterManager/view");
@@ -113,27 +131,11 @@ assertEquals(actualUrl, "http://wom/v3staging/d2d/ClusterManager/view");
 navigatetosubmenu(TerritorryManagerTasks, TerritorryManagerTasksUrl);
 	}
 	
-	public void navigatetosubmenu(WebElement listItem,String CurrentUrl) {
-		// TODO Auto-generated method stub
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		listItem.click();
-		String actualUrl=d.getCurrentUrl();
-		assertEquals(actualUrl, CurrentUrl);
-		
-	}
-	
-	
 	public void verifyDistrictLable() throws IOException {
 		// TODO Auto-generated method stub
 		Properties prop= loaddata.LoadDataToSalesPlanning();
 		VerifyText.VerifyTextgloble(DistrictLableLocatorr, prop.getProperty("districtLable"));
 	}
-	
 	
 	public void verifyTerritoryLable() throws IOException {
 		// TODO Auto-generated method stub
@@ -170,10 +172,8 @@ navigatetosubmenu(TerritorryManagerTasks, TerritorryManagerTasksUrl);
 		Properties prop= loaddata.LoadDataToSalesPlanning();
 		VerifyText.VerifyTextgloble(RemarksLableLocatorr, prop.getProperty("RemarksLable"));
 	}
-	
-	
-	
-public void loaddatabase(String EnterTableColumnName,String EnterQuery) throws ClassNotFoundException, SQLException {
+			
+	public void loaddatabase(String EnterTableColumnName,String EnterQuery) throws ClassNotFoundException, SQLException {
 	Dbconnection Database= new Dbconnection();
 	ResultSet rs=Database.loadDatafromDB(EnterQuery);
 	String value = null;
@@ -186,7 +186,6 @@ public void loaddatabase(String EnterTableColumnName,String EnterQuery) throws C
 System.out.println(">>>>>>>>>>Name of value is>>??<<>> "+value);
 assertEquals("15", value);
 }
-
 
 	public void verifywithdb() throws ClassNotFoundException, SQLException {
 		// TODO Auto-generated method stub

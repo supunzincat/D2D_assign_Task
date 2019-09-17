@@ -26,13 +26,6 @@ WebDriver d= config.LaunchWebDriver.WebdriverLaunch();
 	public void TC_002_Verify_Navigate_TO_MyTask() {
 		// TODO Auto-generated method stub
 		DashboardPage dashbord= new DashboardPage(d);
-		dashbord.navigateToDortoDor();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		dashbord.NavigteToAssignedTasks();
 //d.get("http://wom/v3staging/d2d/ClusterManager/view");
 //d.get("http://localhost/wom_v3/d2d/ClusterManager/view");
