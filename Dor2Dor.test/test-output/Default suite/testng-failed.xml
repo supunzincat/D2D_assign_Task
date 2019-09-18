@@ -3,18 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.TS_001_Sales_Planning">
+      <class name="testCases.TS_008_SummaryReport">
         <methods>
-          <include name="TC_021_verify_Click_tower_Check_Box"/>
-          <include name="TC_017_select_Terriotorry"/>
-          <include name="TC_016_verifyTerritoryvalues"/>
-          <include name="TC_0014_verifyDistrictvalues"/>
-          <include name="TC_023_verify_Cancle_Submission"/>
-          <include name="LoginTowom"/>
-          <include name="TC_024_verify_SubmitSuccessFully"/>
-          <include name="TC_025_districtValue"/>
+          <include name="TC_003_verify_User_name"/>
+          <include name="TC_001_verify_User_Able_TO_Navigate_Dashboard"/>
         </methods>
-      </class> <!-- testCases.TS_001_Sales_Planning -->
+      </class> <!-- testCases.TS_008_SummaryReport -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
